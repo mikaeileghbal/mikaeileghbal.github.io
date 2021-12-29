@@ -1,0 +1,265 @@
+@import "global";
+@import "fonts";
+
+:root {
+	box-sizing: border-box;
+	font-size: 0.75em;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 0px;
+}
+
+@media (min-width: 800px) {
+	:root {
+		font-size: 0.875em;
+	}
+}
+@media (min-width: 1200px) {
+	:root {
+		font-size: 1em;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	letter-spacing: 0.2px;
+	background-color: $green-light;
+	line-height: 1;
+	position: relative;
+	color: black;
+}
+
+//===============
+// Layout styles
+//===============
+
+.section-main {
+	color: $black;
+	margin: 8em 5em;
+	padding: 0em 0em;
+	font-family: "Mulish", sans-serif;
+
+	.container {
+		max-width: 920px;
+		padding-bottom: 0;
+		box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+		background-color: white;
+
+		p {
+			color: black;
+			align-self: flex-start;
+			padding: 0.4em 0 0em;
+			margin-top: 0em;
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+		&::after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	.col__left {
+		@media screen and (min-width: 1000px) {
+			clear: left;
+			float: left;
+			width: 40%;
+		}
+
+		background-color: $gray;
+		color: black;
+		padding: 4em 45px 4em 45px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.col__right {
+		@media screen and (min-width: 1000px) {
+			float: left;
+			width: 60%;
+		}
+
+		padding: 1em 45px 3em 45px;
+		margin: 0;
+		background-color: white;
+		color: black;
+	}
+}
+
+.image-container {
+	margin: 0 auto;
+
+	background-color: transparent;
+	//background-image: url(../images/me-01.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: brightness(1.1) grayscale(0.2) sepia(0) opacity(0.8);
+
+	img {
+		width: 160px;
+		height: 160px;
+		position: relative;
+		border-radius: 50%;
+	}
+	&::before {
+		display: none;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(1, 25, 51, 1);
+		transform: scaleY(1);
+		transform-origin: left bottom;
+	}
+}
+
+//===================
+// Text styles begins
+//===================
+
+.r-title {
+	color: rgb(30, 119, 226);
+	font-size: 1.8rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.r-subtitle {
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+.r-header {
+	align-self: flex-start;
+	color: rgb(30, 119, 226);
+	font-weight: 800;
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	margin-top: 2em;
+	text-transform: uppercase;
+}
+.col__left > .r-header {
+	margin-bottom: 10.8px;
+}
+.r-header-2 {
+	font-weight: 800;
+	font-size: 1rem;
+	margin-top: 1em;
+	text-transform: capitalize;
+}
+.r-header-2-sub {
+	font-weight: 700;
+	font-size: 0.8rem;
+	margin-top: 0em;
+	text-transform: capitalize;
+}
+.r-link {
+	text-decoration: none;
+	color: blue;
+}
+.list {
+	align-self: flex-start;
+	margin-left: 1.3em;
+	margin-top: 0.7em;
+	color: black;
+	font-size: 0.9rem;
+	margin-left: 0.3em;
+}
+.list__contact {
+	@extend .list;
+	list-style-type: none;
+
+	li + li {
+		margin-top: 1em;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	.fa {
+		color: black;
+	}
+}
+.list__skills {
+	@extend .list;
+	text-transform: capitalize;
+	list-style-type: disc;
+	margin-left: 1.3em;
+	line-height: 2em;
+	li {
+		float: left;
+		width: 120px;
+		list-style-type: disc;
+	}
+}
+
+br {
+	clear: left;
+}
+
+// =================
+// print page styles
+// =================
+
+@media print {
+	@page {
+		margin: 0.5cm 0.5cm;
+		size: 8.5in 11in;
+	}
+	.section-main {
+		padding: 0;
+		margin: 0;
+
+		.container {
+			padding: 0;
+			box-shadow: none;
+
+			img {
+				border: 1px solid rgb(197, 191, 191);
+			}
+		}
+		.col__left {
+			background-color: white;
+			clear: left;
+			float: left;
+			width: 40%;
+		}
+		.col__right {
+			padding-left: 0;
+			float: left;
+			width: 60%;
+		}
+	}
+	.section-header {
+		display: none;
+	}
+	.list__skills {
+		width: 280px;
+		li {
+			float: left;
+			width: 140px;
+			list-style-type: disc;
+		}
+	}
+	br {
+		clear: left;
+	}
+}
