@@ -164,7 +164,7 @@ p + p {
   display: block;
   text-decoration: none;
   color: white;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.8em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -291,8 +291,9 @@ header .container {
 .button, .button--resume, .button--email {
   display: inline-block;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   padding: 0.8em 1.8em;
+  letter-spacing: 0.5px;
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -325,6 +326,9 @@ header .container {
 .button:hover::before, .button--resume:hover::before, .button--email:hover::before {
   transform-origin: left bottom;
   transform: scaleY(1);
+}
+.button--email {
+  padding: 1em 2em;
 }
 .button--email::before {
   background-color: white;

@@ -210,7 +210,7 @@ p + p {
   display: block;
   text-decoration: none;
   color: white;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.8em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -379,8 +379,9 @@ header {
 .button {
   display: inline-block;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   padding: 0.8em 1.8em;
+  letter-spacing: 0.5px;
   //color: white;
   text-decoration: none;
   //overflow: hidden;
@@ -423,6 +424,7 @@ header {
 
   &--email {
     @extend .button;
+    padding: 1em 2em;
     //border-color: white;
     &::before {
       background-color: white;
