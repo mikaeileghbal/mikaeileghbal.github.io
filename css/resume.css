@@ -51,7 +51,7 @@ body {
   max-width: 920px;
   padding-bottom: 0;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-  background-color: white;
+  background-color: #f8f8f8;
 }
 .section-main .container p {
   color: black;
@@ -81,6 +81,8 @@ body {
     clear: left;
     float: left;
     width: 40%;
+    height: 100%;
+    overflow: auto;
   }
 }
 .section-main .col__right {
@@ -125,7 +127,7 @@ body {
 
 .r-title {
   color: #1e77e2;
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 900;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -133,10 +135,10 @@ body {
 }
 
 .r-subtitle {
-  font-weight: 400;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 0.8em;
   text-transform: uppercase;
-  letter-spacing: 3.5px;
+  letter-spacing: 4px;
   text-align: center;
 }
 
@@ -206,6 +208,11 @@ body {
   float: left;
   width: 160px;
   list-style-type: disc;
+}
+@media (min-width: 768px) {
+  .list__skills li {
+    width: 140px;
+  }
 }
 
 br {
