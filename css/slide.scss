@@ -84,19 +84,18 @@
         opacity: 1;
       }
       &:hover .item__header > h3 {
-        //transform: translate(0, -10px);
+        opacity: 0;
+      }
+      &:hover p {
+        transform: translate(0, -28px);
       }
       &:hover .item__image {
         //opacity: 0.6;
         //transform: scale(1.02);
       }
-      &:hover p {
-        //opacity: 1;
-        //transform: translateY(-10px);
-      }
       &:hover .item__list {
         opacity: 1;
-        transform: translateY(25px);
+        transform: translateY(-20px);
       }
     }
     // Project item text content styles
@@ -126,55 +125,36 @@
       z-index: 2;
       transition: all 0.3s $transition-func;
 
-      //   &:before {
-      //     display: none;
-      //     content: "01";
-      //     position: absolute;
-      //     left: -5px;
-      //     top: 54px;
-      //     width: 60px;
-      //     height: 37px;
-      //     color: $orange;
-      //     font-size: 2rem;
-      //     font-weight: 400;
-      //     text-align: right;
-      //     line-height: 1.2;
-      //     border-radius: 4px;
-      //     background-color: rgba(210, 65, 79, 0.2);
-    }
-    h3 {
-      color: $black-2;
-      position: relative;
-      font-weight: 500;
-      font-size: 1.2em;
-      text-transform: capitalize;
-      //transform: translate(0px, 40px);
-      //transition: transform 0.2s $transitin-func;
-    }
-    p {
-      opacity: 1;
-      margin: 2px 0em 10px;
-      color: black;
-      font-size: 0.9em;
-      font-weight: 300;
-      letter-spacing: 0;
-      line-height: 1.58;
-
-      //transform: translateY(40px);
-      //transition: opacity 0.2s $transitin-func, transform 0.2s $transitin-func;
+      h3 {
+        color: $black-2;
+        position: relative;
+        font-weight: 500;
+        font-size: 1.2em;
+        text-transform: capitalize;
+        //transform: translate(0px, 40px);
+        user-select: none;
+        opacity: 1;
+        transition: opacity 0.2s $transition-func;
+      }
+      p {
+        opacity: 1;
+        margin: 2px 0em 10px;
+        color: black;
+        font-size: 0.9em;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 1.58;
+        user-select: none;
+        transform: translateY(-0px);
+        transition: opacity 0.2s $transition-func,
+          transform 0.2s $transition-func;
+      }
     }
   }
-  // Project item image styles
   .item__image {
-    //height: 100%;
-    //left: 0%;
-    //top: 0%;
-    //position: absolute;
     background-color: white;
     z-index: 1;
     opacity: 1;
-    //box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-    //transform: translate(-50%, -50%);
     transition: transform 0.2s $transition-func, opacity 0.2s $transition-func;
 
     img {
@@ -201,7 +181,7 @@
   transition: transform 0.2s $transition-func, opacity 0.2s $transition-func;
 
   li {
-    font-size: 0.6rem;
+    font-size: 0.8em;
     font-weight: 400;
     text-transform: uppercase;
     padding: 0.2em 0.5em;
@@ -216,7 +196,7 @@
   &--links {
     @extend .item__list;
     display: flex;
-    display: none;
+    //display: none;
 
     margin-top: 0rem;
     justify-content: space-between;

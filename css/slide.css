@@ -63,9 +63,15 @@
   transform: translateY(0px);
   opacity: 1;
 }
+.case-study-section .project__container .item:hover .item__header > h3 {
+  opacity: 0;
+}
+.case-study-section .project__container .item:hover p {
+  transform: translate(0, -28px);
+}
 .case-study-section .project__container .item:hover .item__list, .case-study-section .project__container .item:hover .item__list--links {
   opacity: 1;
-  transform: translateY(25px);
+  transform: translateY(-20px);
 }
 .case-study-section .project__container .item__header {
   position: absolute;
@@ -84,14 +90,20 @@
   z-index: 2;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.case-study-section .project__container h3 {
+.case-study-section .project__container .item__header h3 {
   color: #17191f;
   position: relative;
   font-weight: 500;
   font-size: 1.2em;
   text-transform: capitalize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.case-study-section .project__container p {
+.case-study-section .project__container .item__header p {
   opacity: 1;
   margin: 2px 0em 10px;
   color: black;
@@ -99,6 +111,12 @@
   font-weight: 300;
   letter-spacing: 0;
   line-height: 1.58;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: translateY(0px);
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .case-study-section .item__image {
   background-color: white;
@@ -128,7 +146,7 @@
   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .item__list li, .item__list--links li {
-  font-size: 0.6rem;
+  font-size: 0.8em;
   font-weight: 400;
   text-transform: uppercase;
   padding: 0.2em 0.5em;
@@ -141,7 +159,6 @@
 }
 .item__list--links {
   display: flex;
-  display: none;
   margin-top: 0rem;
   justify-content: space-between;
   width: 100%;

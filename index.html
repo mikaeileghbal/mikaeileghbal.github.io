@@ -1,187 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/menu.css" />
-	<link rel="stylesheet" href="css/slide.css" />
-	<!-- Add icon library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+  </head>
 
-	<title>Document</title>
-</head>
+  <body>
+    <!-- Loading page -->
+    <div class="loadpage__container">
+      <span class="loadpage__item one">W</span>
+      <span class="loadpage__item two">E</span>
+      <span class="loadpage__item three">L</span>
+      <span class="loadpage__item four">C</span>
+      <span class="loadpage__item five">O</span>
+      <span class="loadpage__item six">M</span>
+      <span class="loadpage__item six">E</span>
+    </div>
+    <!-- Loading page ends -->
 
-<body>
-	<!-- Loading page -->
-	<div class="loadpage__container">
-		<span class="loadpage__item one">W</span>
-		<span class="loadpage__item two">E</span>
-		<span class="loadpage__item three">L</span>
-		<span class="loadpage__item four">C</span>
-		<span class="loadpage__item five">O</span>
-		<span class="loadpage__item six">M</span>
-		<span class="loadpage__item six">E</span>
-	</div>
-	<!-- Loading page ends -->
+    <!-- Header section  -->
+    <header id="header" class="section-header">
+      <nav id="menu-nav" class="top-menu-nav">
+        <div class="nav-container">
+          <a
+            id="menu-home"
+            class="top-menu-link"
+            href="index.html#top"
+            tag="home"
+          >
+            <span tag="home">Home</span>
+            <!-- <div class="menu-link__subtitle">Go home</div> -->
+          </a>
+          <a
+            id="menu-about"
+            class="top-menu-link"
+            href="index.html#about-section"
+            tag="about"
+          >
+            <span tag="About me">About</span>
+            <!-- <div class="menu-link__subtitle">Who am I?</div> -->
+          </a>
+          <a
+            id="menu-works"
+            class="top-menu-link"
+            href="index.html#case-study-section"
+            tag="works"
+          >
+            <span tag="Recent works">Projects</span>
+            <!-- <div class="menu-link__subtitle">See some of my work</div> -->
+          </a>
+          <a
+            id="menu-contact"
+            class="top-menu-link"
+            href="index.html#social-section"
+            tag="contact"
+          >
+            <span tag="Contact">Contact</span>
+            <!-- <div class="menu-link__subtitle">Send a message</div> -->
+          </a>
+          <a
+            id="menu-contact"
+            class="top-menu-link"
+            href="resume.html"
+            tag="resume"
+          >
+            <span tag="resume">Resume</span>
+            <!-- <div class="menu-link__subtitle">Send a message</div> -->
+          </a>
+        </div>
+      </nav>
+      <div id="menu-container" class="container">
+        <a href="index.html" class="logo-m"><span>m</span></a>
+        <ul class="top-menu">
+          <li class="top-menu-item">
+            <a class="link--top" href="index.html#top">home</a>
+          </li>
+          <li class="top-menu-item">
+            <a class="link--top" href="index.html#about-section">about me</a>
+          </li>
+          <li class="top-menu-item">
+            <a class="link--top" href="index.html#case-study-section"
+              >projects</a
+            >
+          </li>
+          <li class="top-menu-item">
+            <a class="link--top" href="index.html#social-section">contact</a>
+          </li>
+          <li class="top-menu-item">
+            <a class="button--resume" href="resume.html">Resume</a>
+          </li>
+        </ul>
+        <div id="burger" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!-- Header section ends -->
 
-	<!-- Header section  -->
-	<header id="header" class="section-header">
-		<nav id="menu-nav" class="top-menu-nav">
-			<div class="nav-container">
-				<a id="menu-home" class="top-menu-link" href="index.html#top" tag="home">
-					<span tag="home">Home</span>
-					<!-- <div class="menu-link__subtitle">Go home</div> -->
-				</a>
-				<a id="menu-about" class="top-menu-link" href="index.html#about-section" tag="about">
-					<span tag="About me">About</span>
-					<!-- <div class="menu-link__subtitle">Who am I?</div> -->
-				</a>
-				<a id="menu-works" class="top-menu-link" href="index.html#case-study-section" tag="works">
-					<span tag="Recent works">Projects</span>
-					<!-- <div class="menu-link__subtitle">See some of my work</div> -->
-				</a>
-				<a id="menu-contact" class="top-menu-link" href="index.html#social-section" tag="contact">
-					<span tag="Contact">Contact</span>
-					<!-- <div class="menu-link__subtitle">Send a message</div> -->
-				</a>
-				<a id="menu-contact" class="top-menu-link" href="resume.html" tag="resume">
-					<span tag="resume">Resume</span>
-					<!-- <div class="menu-link__subtitle">Send a message</div> -->
-				</a>
-			</div>
-		</nav>
-		<div id="menu-container" class="container">
-			<a href="index.html" class="logo-m"><span>m</span></a>
-			<ul class="top-menu">
-				<li class="top-menu-item">
-					<a class="link--top" href="index.html#top">home</a>
-				</li>
-				<li class="top-menu-item">
-					<a class="link--top" href="index.html#about-section">about me</a>
-				</li>
-				<li class="top-menu-item">
-					<a class="link--top" href="index.html#case-study-section">projects</a>
-				</li>
-				<li class="top-menu-item">
-					<a class="link--top" href="index.html#social-section">contact</a>
-				</li>
-				<li class="top-menu-item">
-					<a class="button--resume" href="resume.html">Resume</a>
-				</li>
-			</ul>
-			<div id="burger" class="burger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</header>
-	<!-- Header section ends -->
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div class="container">
+        <div id="headline" class="headline-col-wrapper">
+          <div class="circle">
+            <div class="circle__logo"></div>
+            <div class="circle__text">
+              <p>mikaeil-eghbal-developer-</p>
+            </div>
+          </div>
+          <h1 class="main-title">Mikaeil Eghbal</h1>
+          <h4 class="move subtitle">
+            Hello! I'm a web developer focused on front-end. Mostly I use divide
+            and conquer algorithm to solve my everyday issues.
+          </h4>
+        </div>
+        <div class="button-container move">
+          <a href="#case-study-section" class="button" tag="works"
+            >View my work</a
+          >
+        </div>
+        <a href="#about-section" class="button--down" tag="message"
+          ><span>&#8595;</span></a
+        >
+      </div>
+    </section>
+    <!-- Hero section ends -->
 
-	<!-- Hero section -->
-	<section class="hero-section">
-		<div class="container">
-			<div id="headline" class="headline-col-wrapper">
-				<div class="circle">
-					<div class="circle__logo"></div>
-					<div class="circle__text">
-						<p>mikaeil-eghbal-developer-</p>
-					</div>
-				</div>
-				<h1 class="main-title">Mikaeil Eghbal</h1>
-				<h4 class="move subtitle">
-					Hello! I'm a web developer focused on front-end. Mostly I use divide
-					and conquer algorithm to solve my everyday issues.
-				</h4>
-			</div>
-			<div class="button-container move">
-				<a href="#case-study-section" class="button" tag="works">View my work</a>
-			</div>
-			<a href="#about-section" class="button--down" tag="message"><span>&#8595;</span></a>
-		</div>
-	</section>
-	<!-- Hero section ends -->
+    <!-- Skills section -->
+    <section class="section-skills">
+      <div class="container">
+        <h1 class="subtitle">Wiel ich Deutschland liebe</h1>
+        <h1 class="subtitle">Lerne ich Deutsch</h1>
+      </div>
+    </section>
+    <!-- Skills section ends -->
 
-	<!-- Skills section -->
-	<section class="section-skills">
-		<div class="container">
-			<h1 class="subtitle">Wiel ich Deutschland liebe</h1>
-			<h1 class="subtitle">Lerne ich Deutsch</h1>
-		</div>
-	</section>
-	<!-- Skills section ends -->
+    <!-- About section -->
+    <section id="about-section" class="about-section">
+      <div class="title-container">
+        <h2 class="section-title">About me</h2>
+        <h4 class="section-subtitle">Let me please introduce myself</h4>
+      </div>
+      <div class="container">
+        <div class="about__image">
+          <picture>
+            <source media="(min-width: 481px)" srcset="images/mikaeil-01.jpg" />
+            <img src="images/mikaeil-01-small.jpg" alt="Mikaeil Eghbal" />
+          </picture>
+        </div>
+        <div class="about__social">
+          <ul class="social__list--about">
+            <li class="social__item">
+              <a href="http://facebook.com/mikaeileghbal">
+                <i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="http://instagram/mikaeil.e">
+                <i class="fa fa-instagram"></i
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="http://linkedin.com/mikaeileghbal">
+                <i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="https://github.com/mikaeileghbal">
+                <i class="fa fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="about__info">
+          <p>
+            I am a software engineer focused on <span>front-end</span> web
+            developement. Mostly I use <span>divide and conquer</span> algorithm
+            to solve my everyday issues. I like to resolve problems and create
+            attractive, functional and fully <span>Responsive</span> user
+            interfaces and <span>web applications</span> using modern web
+            technologies. I am happy to see you here.
+          </p>
+          <p class="language">
+            I speak <span class="language__item">English</span
+            ><img src="images/us.jpg" alt="" />,
+            <span class="language__item">Turkish</span
+            ><img src="images/tr.svg" alt="" />,
+            <span class="language__item">Persian</span
+            ><img src="images/ir.png" alt="" />, and
+            <span class="language__item">Deutsch</span
+            ><img src="images/gr.png" alt="" />
+          </p>
 
-	<!-- About section -->
-	<section id="about-section" class="about-section">
-		<div class="title-container">
-			<h2 class="section-title">About me</h2>
-			<h4 class="section-subtitle">Let me please introduce myself</h4>
-		</div>
-		<div class="container">
-			<div class="about__image">
-				<picture>
-					<source media="(min-width: 481px)" srcset="images/mikaeil-01.jpg" />
-					<img src="images/mikaeil-01-small.jpg" alt="Mikaeil Eghbal" />
-				</picture>
-			</div>
-			<div class="about__social">
-				<ul class="social__list--about">
-					<li class="social__item">
-						<a href="http://facebook.com/mikaeileghbal">
-							<i class="fa fa-facebook"></i></a>
-					</li>
-					<li class="social__item">
-						<a href="http://instagram/mikaeil.e">
-							<i class="fa fa-instagram"></i></a>
-					</li>
-					<li class="social__item">
-						<a href="http://linkedin.com/mikaeileghbal">
-							<i class="fa fa-linkedin"></i></a>
-					</li>
-					<li class="social__item">
-						<a href="https://github.com/mikaeileghbal">
-							<i class="fa fa-github"></i></a>
-					</li>
-				</ul>
-			</div>
-			<div class="about__info">
+          <a
+            href="mailto:mikaeileghbal@yahoo.com"
+            class="button--email"
+            tag="message"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- About section ends -->
 
-				<p>
-					I am a software engineer focused on <span>front-end</span> web
-					developement. Mostly I use <span>divide and conquer</span> algorithm
-					to solve my everyday issues. I like to resolve problems and create
-					attractive, functional and fully <span>Responsive</span> user
-					interfaces and <span>web applications</span> using modern web
-					technologies. I am happy to see you here.
-				</p>
-				<p class="language">
-					I speak <span class="language__item">English</span><img src="images/us.jpg" alt="" />,
-					<span class="language__item">Turkish</span><img src="images/tr.svg" alt="" />,
-					<span class="language__item">Persian</span><img src="images/ir.png" alt="" />, and
-					<span class="language__item">Deutsch</span><img src="images/gr.png" alt="" />
-				</p>
-
-				<a href="mailto:mikaeileghbal@yahoo.com" class="button--email" tag="message">Contact</a>
-			</div>
-		</div>
-	</section>
-	<!-- About section ends -->
-
-	<!-- Projects section -->
-	<section id="case-study-section" class="case-study-section">
-		<div class="title-container">
-			<h2 class="section-title">projects</h2>
-			<h4 class="section-subtitle">I have built web applications</h4>
-			<p>
-
-			</p>
-		</div>
-		<div class="project__container">
-			<!-- <figure class="item">
+    <!-- Projects section -->
+    <section id="case-study-section" class="case-study-section">
+      <div class="title-container">
+        <h2 class="section-title">projects</h2>
+        <h4 class="section-subtitle">I have built web applications</h4>
+        <p></p>
+      </div>
+      <div class="project__container">
+        <!-- <figure class="item">
                 <img id="image" class="item__image" src="images/room4.jpg" alt="">
                 <figcaption class="item__header">
                     <h3 id="title" class="item__title">Calendar</h3>
@@ -202,82 +245,90 @@
                     </ul>
                 </figcaption>
             </figure> -->
-		</div>
-	</section>
-	<!-- Projects section ends -->
+      </div>
+    </section>
+    <!-- Projects section ends -->
 
-	<!-- Contact section -->
-	<section id="social-section" class="social-section">
-		<div class="title-container">
-			<h2 class="section-title">Contact</h2>
-			<h4 class="section-subtitle">Would you like to contact?</h4>
-			<p>
-				If you like my work and would like to work together, please send me
-				direct message or contact me through my social links.
-			</p>
-		</div>
-		<div class="container">
-			<a href="mailto:mikaeileghbal@yahoo.com" class="button--email" tag="message">Send message</a>
-			<ul class="social__list">
-				<li class="social__item">
-					<a href="http://facebook.com/mikaeileghbal">
-						<i class="fa fa-facebook"></i></a>
-				</li>
-				<li class="social__item">
-					<a href="http://instagram/mikaeil.e">
-						<i class="fa fa-instagram"></i></a>
-				</li>
-				<li class="social__item">
-					<a href="http://linkedin.com/mikaeileghbal">
-						<i class="fa fa-linkedin"></i></a>
-				</li>
-				<li class="social__item">
-					<a href="https://github.com/mikaeileghbal">
-						<i class="fa fa-github"></i></a>
-				</li>
-			</ul>
-		</div>
-	</section>
-	<!-- Contact section ends -->
+    <!-- Contact section -->
+    <section id="social-section" class="social-section">
+      <div class="title-container">
+        <h2 class="section-title">Contact</h2>
+        <h4 class="section-subtitle">Would you like to contact?</h4>
+        <p>
+          If you like my work and would like to work together, please send me
+          direct message or contact me through my social links.
+        </p>
+      </div>
+      <div class="container">
+        <a
+          href="mailto:mikaeileghbal@yahoo.com"
+          class="button--email"
+          tag="message"
+          >Send message</a
+        >
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="http://facebook.com/mikaeileghbal">
+              <i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="http://instagram/mikaeil.e">
+              <i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="http://linkedin.com/mikaeileghbal">
+              <i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="https://github.com/mikaeileghbal">
+              <i class="fa fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Contact section ends -->
 
-	<!-- Footer section -->
-	<footer class="section-footer">
-		<div class="container">
-			<a href="#top">
-				<div class="footer__gotop">
-					<span></span>
-				</div>
-			</a>
-			<nav class="footer__nav">
-				<ul class="footer__list">
-					<li class="social-item">
-						<a class="link--footer" href="#top">home</a>
-					</li>
-					<li class="social-item">
-						<a class="link--footer" href="#about-section">about me</a>
-					</li>
-					<li class="social-item">
-						<a class="link--footer" href="#case-study-section">projects</a>
-					</li>
-					<li class="social-item">
-						<a class="link--footer" href="#social-section">contact</a>
-					</li>
-				</ul>
-			</nav>
+    <!-- Footer section -->
+    <footer class="section-footer">
+      <div class="container">
+        <a href="#top">
+          <div class="footer__gotop">
+            <span></span>
+          </div>
+        </a>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="social-item">
+              <a class="link--footer" href="#top">home</a>
+            </li>
+            <li class="social-item">
+              <a class="link--footer" href="#about-section">about me</a>
+            </li>
+            <li class="social-item">
+              <a class="link--footer" href="#case-study-section">projects</a>
+            </li>
+            <li class="social-item">
+              <a class="link--footer" href="#social-section">contact</a>
+            </li>
+          </ul>
+        </nav>
 
-			<div class="footer__copy">
-				<p><span>&COPY; 2021</span>&nbsp;Mikaeil Eghbal</p>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer section ends -->
+        <div class="footer__copy">
+          <p><span>&COPY; 2021</span>&nbsp;Mikaeil Eghbal</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section ends -->
 
-	<!-- Scripts -->
-	<script src="code/text-circle.js"></script>
-	<script src="code/main.js"></script>
-	<script src="code/intersection.js"></script>
-	<script src="code/pageLoader.js"></script>
-	<script src="code/project.js"></script>
-</body>
-
+    <!-- Scripts -->
+    <script src="code/text-circle.js"></script>
+    <script src="code/main.js"></script>
+    <script src="code/intersection.js"></script>
+    <script src="code/pageLoader.js"></script>
+    <script src="code/project.js"></script>
+  </body>
 </html>

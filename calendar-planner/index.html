@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="_css/calendar.css">
+
+    <title>Calendar</title>
+</head>
+
+<body>
+    <header>
+        <div class='year-header'>
+            <span class='app-title'>Calendar</span>
+            <button id="btnToday" class="button button--today">today</button>
+            <button id="btnPreviousYear" class="button button--circle">&#10094</button>
+            <button id="btnNextYear" class="button button--circle">&#10095</button>
+            <span class='current-year'></span>
+            <span class='time'></span>
+            <span class='today'></span>
+        </div>
+    </header>
+
+    <section class="section-main">
+        <div id="calendar" class="calendar">
+        </div>
+
+        <div class="side-menu">
+            <button id=btnOpenNotes class="button--close">&#128221</button>
+        </div>
+        <div class="side-panel">
+            <header class="side-panel__header">
+                <h1>Notes</h1>
+                <button id="btnCloseSidePanel" class="button--close">&#10006</button>
+            </header>
+            <section class="side-panel__body">
+                <div class="title-date">
+                    <h4 class="side-panel_date">29 December 2021</h4>
+                </div>
+                <div class="todo__empty">Not implemented...</div>
+                <div class="todo__container">
+                    <div class="todo__row">
+                        <label class="todo__label"><input class="todo__check" type="checkbox" checkbox="false" />Water
+                            the
+                            plants</label>
+                    </div>
+                    <div class="todo__row">
+                        <label class="todo__label"><input class="todo__check" type="checkbox" checkbox="false" />Water
+                            the
+                            plants</label>
+                    </div>
+                    <div class="todo__row">
+                        <label class="todo__label"><input class="todo__check" type="checkbox" checkbox="false" />Water
+                            the
+                            plants</label>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis repudiandae quis quae optio? Excepturi
+                    est mollitia, repellendus quam voluptatum veniam quos ratione aliquid exercitationem sequi fugit,
+                    maiores necessitatibus fuga numquam?</p>
+            </section>
+
+        </div>
+    </section>
+
+
+    <script src="_code/todo.js"></script>
+    <script src="_code/events.js"></script>
+    <!-- <script src="_code/calendar.js" ></script> -->
+
+    <script src="_code/app.js" type="module"></script>
+
+
+</body>
+
+</html>

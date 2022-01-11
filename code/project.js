@@ -18,7 +18,7 @@ let itemObjects = [
     desc: "Dynamic content",
     tags: ["html", "css", "scss", "javascript"],
     links: [
-      { text: "view project", href: "#" },
+      { text: "view project", href: "calendar-planner/index.html" },
       { text: "view code", href: "#" },
     ],
     src: "images/calendar.png",
@@ -78,7 +78,7 @@ itemTemplate.innerHTML = `<figure class="item">
                         
                     </ul>
                     <ul class="item__list--links" id="links">
-                        <li><i class="fa fa-cube"></i><a class="link--case" href="">view project</a></li>
+                        <li><i class="fa fa-cube"></i><a class="link--case" href="calendar-planner/index.html">view project</a></li>
                         <li><i class="fa fa-github"></i><a class="link--case" href="">view code</a></li>
                         </li>
                     </ul>
@@ -109,9 +109,12 @@ function createItem(item) {
     tags.append(li);
   }
 
-  let li = `<li><i class="fa fa-cube"></i><a class="link--case " href="${item.links[0].href}">${item.links[0].text}</a></li >
-                    <li><i class="fa fa-github"></i><a class="link--case" href="${item.links[1].href}">${item.links[1].text}</a></li>`;
-  links.innerHTML = li;
+  console.log(item.links[0].href);
+  let li = `<li><i class="fa fa-cube"></i><a class="link--case" href="calendar-planner/index.html">Calendar</a></li>
+                    <li><i class="fa fa-github"></i><a class="link--case" href="#">Code</a></li>
+                    <li><i class="fa fa-github"></i><a class="link--case" href="#">Code</a></li>
+                     `;
+  //links.innerHtml = li;
 
   projectcontainer.append(newItem);
 }
