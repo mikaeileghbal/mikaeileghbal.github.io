@@ -303,6 +303,7 @@ header .container {
   border-style: solid;
   border-width: 1px;
   border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1) inset;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 .button::before, .button--resume::before, .button--email::before {
@@ -688,6 +689,7 @@ header .container {
   z-index: 10000;
   text-decoration: none;
   perspective: 400px;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1) inset;
   transition: color 0.2s;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
