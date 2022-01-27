@@ -34,14 +34,17 @@ let itemObjects = [
     src: "images/weather-01.png",
   },
   {
-    title: "weather",
+    title: "wordcounter",
     desc: "Dynamic content",
     tags: ["html", "css", "scss", "javascript", "API"],
     links: [
-      { text: "view project", href: "#" },
-      { text: "view code", href: "#" },
+      { text: "view project", href: "wordcounter/index.html" },
+      {
+        text: "view code",
+        href: "https://github.com/mikaeileghbal/wordcounter",
+      },
     ],
-    src: "images/calendar-2.png",
+    src: "images/wordcounter.png",
   },
   {
     title: "weather",
@@ -77,10 +80,8 @@ itemTemplate.innerHTML = `<figure class="item">
                     <ul class="item__list" id="tags">
                         
                     </ul>
-                    <ul class="item__list--links" id="links">
-                        <li><i class="fa fa-cube"></i><a class="link--case" href="calendar-planner/index.html">view project</a></li>
-                        <li><i class="fa fa-github"></i><a class="link--case" href="">view code</a></li>
-                        </li>
+                    <ul class="item__list--links" id="viewlinks">
+                        
                     </ul>
                 </figcaption>
             </figure>`;
@@ -98,7 +99,7 @@ function createItem(item) {
   let title = newItem.querySelector("#title");
   let desc = newItem.querySelector("#desc");
   let tags = newItem.querySelector("#tags");
-  let links = newItem.querySelector("#links");
+  let viewlinks = newItem.querySelector("#viewlinks");
 
   image.src = item.src;
   title.textContent = item.title;
@@ -110,11 +111,13 @@ function createItem(item) {
   }
 
   console.log(item.links[0].href);
-  let li = `<li><i class="fa fa-cube"></i><a class="link--case" href="calendar-planner/index.html">Calendar</a></li>
-                    <li><i class="fa fa-github"></i><a class="link--case" href="#">Code</a></li>
-                    <li><i class="fa fa-github"></i><a class="link--case" href="#">Code</a></li>
-                     `;
-  //links.innerHtml = li;
+  let li = `<li>
+              <i class="fa fa-cube"></i><a class="link--case" href="${item.links[0].href}">Calendar</a>
+            </li>
+            <li>
+              <i class="fa fa-github"></i><a class="link--case" href="${item.links[1].href}">Code</a>
+            </li>`;
 
+  viewlinks.innerHTML = li;
   projectcontainer.append(newItem);
 }

@@ -1,12 +1,14 @@
 :root {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 20px;
 }
 
 *,
 ::before,
 ::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -32,6 +34,8 @@ section {
   width: 100%;
   background-color: aqua;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -40,10 +44,19 @@ section {
   background: #f8f3eb;
   margin: 0em auto;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .year-header {
@@ -56,25 +69,39 @@ section {
   color: black;
   padding: 0.7em 2em;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .year-header .app-title {
   font-size: 1em;
   color: #686565;
   margin-right: 3em;
 }
+
 .year-header .current-year {
   cursor: pointer;
   margin-left: 3em;
   font-size: 0.9em;
+  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
+
 .year-header .current-year:hover {
   text-decoration: underline;
 }
+
 .year-header::after {
   display: none;
   content: "";
@@ -85,6 +112,7 @@ section {
   left: 0;
   background-color: #e23550;
 }
+
 .year-header .today {
   border: 5px solid #e23550;
   font-size: 0.6em;
@@ -96,6 +124,7 @@ section {
   margin-left: auto;
   color: #e23550;
 }
+
 .year-header .time {
   display: none;
   font-size: 1em;
@@ -105,10 +134,14 @@ section {
   width: 100%;
   height: 91vh;
   overflow: auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1em;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin: 0em 0em 0em;
   background-color: #f8f3eb;
   border-radius: 50px;
@@ -116,6 +149,7 @@ section {
 }
 
 .year-container--expand {
+  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   gap: 0.5em;
@@ -157,6 +191,7 @@ section {
   padding: 0em;
   width: 200px;
 }
+
 .month-container .calendar_table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -211,6 +246,7 @@ caption {
   font-size: 1.2em;
   display: none;
 }
+
 .year::after {
   content: "";
   position: absolute;
@@ -238,15 +274,24 @@ div.days {
   text-align: center;
   border-radius: 50%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
   text-align: center;
 }
+
 div.days:hover {
   background-color: rgba(226, 53, 80, 0.3);
 }
+
 div.days.selected {
   background-color: rgba(226, 53, 80, 0.3);
 }
@@ -271,21 +316,29 @@ td.calendar-dates.fri {
   font-size: 1.5em;
   color: #fafafa;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
   background-color: #e23550;
   position: absolute;
   bottom: 1.5em;
   right: 2em;
+  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+
 .btn-add:hover {
   background-color: #e54b63;
 }
 
-.month-btn, .month-btn--next, .month-btn--previous {
+.month-btn, .month-btn--previous, .month-btn--next {
   position: absolute;
   width: 70px;
   height: 40px;
@@ -294,22 +347,31 @@ td.calendar-dates.fri {
   cursor: pointer;
   border-radius: 8px;
   display: none;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.month-btn:hover, .month-btn--next:hover, .month-btn--previous:hover {
+
+.month-btn:hover, .month-btn--previous:hover, .month-btn--next:hover {
   background-color: #e54b63;
 }
-.month-btn span, .month-btn--next span, .month-btn--previous span {
+
+.month-btn span, .month-btn--previous span, .month-btn--next span {
   padding: 0 0.1em;
   margin-top: 0.3em;
 }
-.month-btn .arrow, .month-btn--next .arrow, .month-btn--previous .arrow {
+
+.month-btn .arrow, .month-btn--previous .arrow, .month-btn--next .arrow {
   margin-top: 0;
   font-size: 0.8em;
   color: white;
 }
+
 .month-btn--previous {
   top: 50vh;
   left: 4.5em;
@@ -317,6 +379,7 @@ td.calendar-dates.fri {
   height: 40px;
   border-radius: 50%;
 }
+
 .month-btn--next {
   top: 50vh;
   right: 4.5em;
@@ -324,6 +387,7 @@ td.calendar-dates.fri {
   height: 40px;
   border-radius: 50%;
 }
+
 .month-btn--save, .month-btn--cancel {
   color: #e23550;
   background-color: transparent;
@@ -331,9 +395,11 @@ td.calendar-dates.fri {
   border: none;
   font-size: 0.9em;
   border-radius: 8px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
 }
+
 .month-btn--save:hover, .month-btn--cancel:hover {
   background-color: #f8f3eb;
 }
@@ -345,15 +411,26 @@ td.calendar-dates.fri {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(-100%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
 
 .add-item__countainer.show {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .add-item__frame {
@@ -365,6 +442,7 @@ td.calendar-dates.fri {
   text-align: center;
   position: relative;
 }
+
 .add-item__frame h1 {
   color: #fafafa;
   font-size: 1.5em;
@@ -372,11 +450,16 @@ td.calendar-dates.fri {
 }
 
 .add-item__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-input[type=text] {
+input[type="text"] {
   display: block;
   width: 100%;
   border: none;
@@ -388,13 +471,16 @@ input[type=text] {
   color: white;
   outline: none;
   margin-top: 1.5em;
+  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-input[type=text]:focus {
+
+input[type="text"]:focus {
   background-color: #f8f3eb;
   border-bottom: 2px solid #e23550;
 }
-input[type=text]:valid {
+
+input[type="text"]:valid {
   background-color: #f8f3eb;
 }
 
@@ -405,11 +491,15 @@ input[type=text]:valid {
   left: 0;
   bottom: 0em;
   padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.button, .button--close, .button--circle {
+.button, .button--circle, .button--close {
   border: 1px solid silver;
   padding: 0.7em 1em;
   font-size: 0.6em;
@@ -419,9 +509,11 @@ input[type=text]:valid {
   border-radius: 4px;
   margin-right: 2em;
   text-transform: capitalize;
+  -webkit-transition: background-color 0.125s;
   transition: background-color 0.125s;
   cursor: pointer;
 }
+
 .button--circle {
   padding: 0.6em 1em;
   background-color: rgba(255, 255, 255, 0);
@@ -429,11 +521,18 @@ input[type=text]:valid {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0.1em;
 }
+
 .button--close {
   padding: 0.6em 1em;
   background-color: rgba(255, 255, 255, 0);
@@ -441,17 +540,25 @@ input[type=text]:valid {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0;
   font-size: 0.8em;
   width: 38px;
   height: 38px;
 }
+
 .button:hover, .button--circle:hover, .button--close:hover {
   background-color: #ddd8d8;
 }
+
 .button:active, .button--circle:active, .button--close:active {
   background-color: #bebcbc;
 }
@@ -471,7 +578,8 @@ input[type=text]:valid {
   display: none;
   width: 350px;
   background-color: #f8f3eb;
-  box-shadow: rgba(0, 0, 0, 0.2) -1px 0px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) -1px 0px 4px;
+          box-shadow: rgba(0, 0, 0, 0.2) -1px 0px 4px;
 }
 
 .side-panel.active {
@@ -480,11 +588,18 @@ input[type=text]:valid {
 
 .side-panel__header {
   padding: 0.5em 0.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #dad7d7;
 }
+
 .side-panel__header h1 {
   font-size: 0.8em;
   color: #686565;
@@ -493,19 +608,28 @@ input[type=text]:valid {
 .side-panel__body {
   background-color: #f8f3eb;
   padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .side-panel__body * + * {
   margin-top: 1em;
 }
+
 .side-panel__body p {
   font-size: 0.6em;
   line-height: 18px;
 }
+
 .side-panel__body .title-date {
   text-align: left;
 }
+
 .side-panel__body .title-date .side-panel_date {
   font-size: 0.8em;
 }
@@ -531,6 +655,7 @@ input[type=text]:valid {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 
@@ -541,4 +666,5 @@ input[type=text]:valid {
 
 .todo__check {
   margin-right: 0.5em;
-}/*# sourceMappingURL=calendar.css.map */
+}
+/*# sourceMappingURL=calendar.css.map */
