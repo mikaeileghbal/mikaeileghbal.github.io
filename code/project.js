@@ -112,10 +112,10 @@ function createItem(item) {
 
   console.log(item.links[0].href);
   let li = `<li>
-              <i class="fa fa-cube"></i><a class="link--case" href="${item.links[0].href}">Calendar</a>
+              <i class="fa fa-cube"></i><a class="link--case" href="${item.links[0].href}">live project</a>
             </li>
             <li>
-              <i class="fa fa-github"></i><a class="link--case" href="${item.links[1].href}">Code</a>
+              <i class="fa fa-github"></i><a class="link--case" href="${item.links[1].href}">view code</a>
             </li>`;
 
   viewlinks.innerHTML = li;
