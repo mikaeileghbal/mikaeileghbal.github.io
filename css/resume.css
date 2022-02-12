@@ -8,10 +8,8 @@
   font-family: "Futura";
   src: url("../fonts/Futura Maxi CG Light.otf") format("opentype");
 }
-
 :root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,8 +25,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
@@ -50,25 +47,20 @@ body {
   padding: 0em 0em;
   font-family: "Mulish", sans-serif;
 }
-
 @media (min-width: 769px) {
   .section-main {
     margin: 8em 2em;
   }
 }
-
 .section-main .container {
   max-width: 920px;
   padding-bottom: 0;
-  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
   background-color: #f8f8f8;
 }
-
 .section-main .container p {
   color: black;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   padding: 0.4em 0 0em;
   margin-top: 0em;
   font-size: 0.9em;
@@ -76,32 +68,20 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
 }
-
 .section-main .container::after {
   display: block;
   content: "";
   clear: both;
 }
-
 .section-main .col__left {
   background-color: #f8f8f8;
   color: black;
   padding: 4em 30px 4em 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 @media screen and (min-width: 1000px) {
   .section-main .col__left {
     clear: left;
@@ -111,14 +91,12 @@ body {
     overflow: auto;
   }
 }
-
 .section-main .col__right {
   padding: 1em 30px 3em 30px;
   margin: 0;
   background-color: white;
   color: black;
 }
-
 @media screen and (min-width: 1000px) {
   .section-main .col__right {
     float: left;
@@ -132,17 +110,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-filter: brightness(1.1) grayscale(0.2) sepia(0) opacity(0.8);
-          filter: brightness(1.1) grayscale(0.2) sepia(0) opacity(0.8);
+  filter: brightness(1.1) grayscale(0.2) sepia(0) opacity(0.8);
 }
-
 .image-container img {
   width: 160px;
   height: 160px;
   position: relative;
   border-radius: 50%;
 }
-
 .image-container::before {
   display: none;
   content: "";
@@ -152,10 +127,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: #011933;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transform-origin: left bottom;
-          transform-origin: left bottom;
+  transform: scaleY(1);
+  transform-origin: left bottom;
 }
 
 .r-title {
@@ -176,8 +149,7 @@ body {
 }
 
 .r-header {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   color: #1e77e2;
   font-weight: 800;
   font-size: 1.2rem;
@@ -211,9 +183,8 @@ body {
   color: blue;
 }
 
-.list, .list__contact, .list__skills {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.list, .list__skills, .list__contact {
+  align-self: flex-start;
   margin-left: 1.3em;
   margin-top: 0.7em;
   color: black;
@@ -224,16 +195,13 @@ body {
 .list__contact {
   list-style-type: none;
 }
-
 .list__contact li + li {
   margin-top: 1em;
 }
-
 .list__contact a {
   text-decoration: none;
   color: black;
 }
-
 .list__contact .fa {
   color: black;
 }
@@ -244,13 +212,11 @@ body {
   margin-left: 1.3em;
   line-height: 2em;
 }
-
 .list__skills li {
   float: left;
   width: 160px;
   list-style-type: disc;
 }
-
 @media (min-width: 768px) {
   .list__skills li {
     width: 140px;
@@ -269,17 +235,18 @@ br {
   .r-title {
     font-size: 1.3em;
   }
+
   .r-subtitle {
     font-size: 0.8em;
   }
+
   .section-main {
     padding: 0;
     margin: 0;
   }
   .section-main .container {
     padding: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .section-main .container img {
     border: 1px solid #c5bfbf;
@@ -295,9 +262,11 @@ br {
     float: left;
     width: 60%;
   }
+
   .section-header {
     display: none;
   }
+
   .list__skills {
     width: 280px;
   }
@@ -306,8 +275,8 @@ br {
     width: 140px;
     list-style-type: disc;
   }
+
   br {
     clear: left;
   }
-}
-/*# sourceMappingURL=resume.css.map */
+}/*# sourceMappingURL=resume.css.map */
