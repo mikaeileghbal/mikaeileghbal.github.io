@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .year-header {
@@ -16,10 +17,12 @@ caption {
 }
 
 .month-container {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   height: 100%;
   margin: 0 auto;
 }
+
 .month-container .calendar_table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -34,4 +37,5 @@ td {
   font-size: 0.6em;
   width: 50px;
   text-align: center;
-}/*# sourceMappingURL=monthview.css.map */
+}
+/*# sourceMappingURL=monthview.css.map */
