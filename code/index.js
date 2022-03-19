@@ -75,7 +75,7 @@ const App = (function () {
 			desc: "Calling public API",
 			tags: ["html", "css", "scss", "javascript", "API"],
 			links: [
-				{ text: "view project", href: "./weather-item/index.html" },
+				{ text: "view project", href: "./weather-items/index.html" },
 				{
 					text: "view code",
 					href: "https://github.com/mikaeileghbal/weather-items.git",
@@ -101,7 +101,7 @@ const App = (function () {
 			desc: "Web Components",
 			tags: ["html", "css", "scss", "javascript", "API"],
 			links: [
-				{ text: "view project", href: "./worlclock/index.html" },
+				{ text: "view project", href: "./worldclock/index.html" },
 				{
 					text: "view code",
 					href: "https://github.com/mikaeileghbal/worldclock.git",
