@@ -1,10 +1,13 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  --theme-color: rgb(2, 216, 226);
+  --theme-color: #04aa6d;
   --gray: rgb(246, 247, 248);
   --border-color: #e8e9ea;
   --green: rgb(165, 214, 102);
+  --blue: #2196f3;
+  --orange: #ff9800;
+  --red: #f44336;
 }
 
 body {
@@ -12,8 +15,7 @@ body {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   font-family: Helvetica, sans-serif;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f7f8), to(white));
-  background-image: linear-gradient(to bottom, #f6f7f8, white);
+  background: #d3d0c9;
   scroll-behavior: smooth;
 }
 
@@ -26,13 +28,14 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: silver;
+  background-color: #9e998d;
   border-radius: 0px;
 }
 
 .topbar {
   background: white;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px;
 }
 
 .header-container {
@@ -80,10 +83,11 @@ header span + span {
   margin-left: -3px;
 }
 
-main {
+main,
+.description {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 10px 0px;
+  padding: 10px 0px 0;
 }
 
 .leftcolumn {
@@ -100,9 +104,11 @@ main {
 .card {
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
+  margin-top: 8px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 2px rgba(16, 10, 9, 0.15);
+          box-shadow: 0 1px 2px rgba(16, 10, 9, 0.15);
+  border: 0px solid var(--border-color);
   position: relative;
 }
 
@@ -111,6 +117,7 @@ main {
   font-weight: 500;
   color: #777;
   margin-top: 0;
+  margin-bottom: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -129,14 +136,13 @@ main {
 }
 
 footer {
-  padding: 20px;
   text-align: center;
-  background-color: var(--gray);
-  border-top: 1px solid var(--border-color);
+  background-color: white;
+  border-top: 1px solid #ccc;
   color: #333;
   font-size: 12px;
   margin-top: 20px;
-  padding: 5em 0;
+  padding: 5em 20px;
 }
 
 footer p {
@@ -166,12 +172,12 @@ ul {
   padding: 0;
 }
 
-li {
+ul li {
   display: inline-block;
   padding: 0 0px;
 }
 
-li:not(:last-of-type) {
+ul li:not(:last-of-type) {
   margin-right: 50px;
 }
 
@@ -185,19 +191,60 @@ a:hover {
   border-bottom: 2px solid #333;
 }
 
+@media screen and (max-width: 1048px) {
+  main,
+  .description {
+    padding: 10px 20px 0;
+  }
+}
+
 @media screen and (max-width: 769px) {
   .leftcolumn,
   .rightcolumn {
     width: 100%;
     padding: 0;
   }
+  .topbar {
+    padding: 20px;
+  }
   .topnav,
   .topnav li {
     float: none;
     width: 100%;
   }
+  .topnav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .topnav li {
+    display: inline;
+    border: 1px solid #ddd;
+  }
+  .topnav li:not(:last-child) {
+    border-bottom: none;
+  }
+  .topnav a {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+  }
   .h1 {
     float: none;
+  }
+  .file-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   footer {
     padding-left: 20px;
@@ -206,11 +253,8 @@ a:hover {
 }
 
 @media screen and (max-width: 481px) {
-  .file-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  li:not(:last-of-type) {
+    margin-right: 5px;
   }
 }
 
@@ -264,8 +308,9 @@ textarea {
 }
 
 textarea:focus {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--theme-color);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .file-container {
@@ -296,21 +341,22 @@ textarea:focus {
 }
 
 .file-container .drag-title {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: capitalize;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .button {
   border: none;
   background-color: var(--theme-color);
   color: white;
-  padding: 10px 30px;
+  padding: 16px 30px;
   border-radius: 5px;
   font-size: 10px;
-  text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -319,7 +365,7 @@ textarea:focus {
 }
 
 .button:hover {
-  background-color: #65b0bd;
+  background-color: #03915d;
 }
 
 .button:active {
@@ -336,27 +382,67 @@ textarea:focus {
   font-size: 12px;
   padding: 5px 0;
   font-weight: 500;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .error {
   opacity: 0;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
   width: 100%;
-  padding: 5px 10px;
-  background-color: crimson;
+  padding: 25px 10px;
+  background-color: var(--red);
   color: white;
   font-size: 12px;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.18);
   -webkit-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
 }
 
 .error.show {
+  display: block;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
+}
+
+#logo span:nth-child(1) {
+  background-color: var(--theme-color);
+}
+
+#logo span:nth-child(2) {
+  background-color: var(--blue);
+}
+
+#logo span:nth-child(3) {
+  background-color: var(--orange);
+}
+
+#logo span:nth-child(4) {
+  background-color: var(--red);
+}
+
+.description h2 {
+  font-weight: 300;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+}
+
+.description p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.description li {
+  padding: 8px;
+  color: var(--blue);
 }
 /*# sourceMappingURL=main.css.map */
