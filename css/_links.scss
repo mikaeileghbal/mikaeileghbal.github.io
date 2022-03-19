@@ -1,0 +1,115 @@
+.link {
+	font-weight: 400;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	text-decoration: none;
+	padding: 26px 0px;
+	color: $gray;
+	transition: color 0.2s;
+
+	&--top {
+		@extend .link;
+		display: block;
+		text-transform: uppercase;
+		@include tablet {
+			font-size: 0.8em;
+			margin-right: 3em;
+			padding: 8px 0px;
+		}
+
+		&:hover {
+			color: $green-light;
+			text-decoration: underline;
+		}
+	}
+
+	&--case {
+		@extend .link;
+		color: $blue-dark;
+		font-size: 1em;
+		font-weight: 400;
+		margin-right: 0em;
+		letter-spacing: 0;
+		text-transform: capitalize;
+
+		&:hover {
+			color: $green-light;
+			text-decoration: underline;
+		}
+	}
+	// &--social {
+	//   @extend .link;
+	//   &:hover {
+	//     color: white;
+	//   }
+	// }
+}
+
+.button {
+	text-decoration: none;
+	padding: 1em 2em;
+	font-weight: 400;
+	font-size: 0.9em;
+	letter-spacing: 0.5px;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 6px;
+	box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1) inset;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
+	&--resume {
+		@extend .button;
+		display: inline-block;
+		font-size: 0.9rem;
+		padding: 1em 3em;
+		align-self: center;
+		margin-top: 2em;
+		text-transform: capitalize;
+		@include tablet {
+			padding: 0.8em 2em;
+			margin-top: 0;
+			font-size: 0.8em;
+		}
+	}
+}
+
+.logo {
+	@extend .link;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 0.2em 0.3em 0.3em 0.4em;
+	margin: 0;
+	text-align: center;
+	z-index: 2;
+	background-color: rgba(255, 255, 255, 0.2);
+	clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+	transform-style: preserve-3d;
+	@include transition;
+}
+
+.social .fa {
+	padding: 4px;
+	font-size: 24px;
+	font-weight: 700;
+	margin: 10px;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	box-sizing: unset;
+	@include transition;
+	color: $blue-dark;
+	&:hover {
+		color: black;
+	}
+}
+
+a > i {
+	margin-right: 8px;
+}

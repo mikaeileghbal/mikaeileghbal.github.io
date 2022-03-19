@@ -1,23 +1,104 @@
-$gray-dark: rgb(98, 97, 93);
-$green-dark: #025169;
-$green-medium: #047fa4;
-$green-light: #cbe0e0;
+// Color pallete
+$green-dark: rgb(0, 92, 110);
+$black: #222;
+$green-middle: rgb(108, 179, 182);
+$green-light: rgb(157, 175, 98);
+$blue-dark: #6f7098;
+$gray: rgb(248, 248, 248);
+$gray-dark: #818181;
+$gray-blue: rgb(187, 191, 205);
 $navy: rgb(17, 32, 44);
 $orange: rgb(210, 65, 79);
-
-/*===============
-  Color paletee
-=================*/
-
-$black: rgb(0, 92, 110);
-$black-2: rgb(23, 25, 31);
-$white: rgb(242, 242, 242);
-$myThemeColorSecond: rgb(108, 179, 182);
-$myThemeColor: rgb(157, 175, 98);
-$mySecondColor: #6f7098;
-$gray: rgb(248, 248, 248);
-$gray-text: rgb(187, 191, 205);
-// End of color palette
+$overlay: #14b1bb80;
 
 $gradient: linear-gradient(-135deg, rgb(255, 255, 255), $gray);
 $transition-func: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$container-padding-left-right: 1em;
+$container-max-width: 1220px;
+
+// Media queries
+$fifteen-inch: 1440px;
+$thirteen-inch: 1280px;
+$desktop-width: 1024px;
+$little-desktop: 850px;
+$tablet-width: 768px;
+$weird-not-tablet-width: 630px;
+$phablet-width: 550px;
+$mobile-width: 480px;
+$small-mobile-width: 360px;
+$tiny-mobile-width: 330px;
+
+@mixin transition {
+	transition: all 0.2s ease-in-out;
+}
+
+@mixin thirteen {
+	@media screen and (min-width: #{$thirteen-inch}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin little-desktop {
+	@media screen and (min-width: #{$little-desktop}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin weird-medium {
+	@media screen and (min-width: #{$weird-not-tablet-width}) {
+		@content;
+	}
+}
+
+@mixin phablet {
+	@media screen and (min-width: #{$phablet-width}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: #{$mobile-width}) {
+		@content;
+	}
+}
+
+@mixin small-mobile {
+	@media screen and (min-width: #{$small-mobile-width}) {
+		@content;
+	}
+}
+
+@mixin tiny-mobile {
+	@media screen and (min-width: #{$tiny-mobile-width}) {
+		@content;
+	}
+}
+
+@mixin animation-slide-up($delay) {
+	animation: slide-up;
+	animation-delay: $delay;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes slide-up {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

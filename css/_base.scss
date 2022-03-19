@@ -1,0 +1,40 @@
+:root {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Roboto", sans-serif;
+}
+::-webkit-scrollbar {
+	background-color: $green-dark;
+	width: 0.4em;
+	margin: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+}
+
+.container {
+	max-width: $container-max-width;
+	margin: 0 auto;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+section {
+	padding: 7em 0.5em;
+}

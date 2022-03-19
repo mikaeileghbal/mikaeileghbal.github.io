@@ -1,0 +1,73 @@
+main {
+	height: 100vh;
+	background-color: aqua;
+	margin: 0;
+}
+.hero {
+	position: relative;
+
+	height: 100%;
+	background-color: $green-dark;
+	// background-image: url("../images/land-mount.jpg");
+	// background-position: center;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// //background-blend-mode: color-burn;
+	// background-blend-mode: exclusion;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hero-container {
+	max-width: 600px;
+	padding: 1em;
+	margin: auto;
+	text-align: center;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	* {
+		display: inline-block;
+		margin: 16px 0;
+	}
+}
+
+.hero-title {
+	position: relative;
+	font-weight: 500;
+	font-size: 1.5em;
+	letter-spacing: 6px;
+	color: white;
+	opacity: 0;
+	line-height: 0.9em;
+	pointer-events: none;
+	text-transform: uppercase;
+
+	@include animation-slide-up(0s);
+
+	@include mobile {
+		font-size: 2.2em;
+	}
+
+	@include tablet {
+		font-size: 3em;
+	}
+}
+
+.hero-subtitle {
+	position: relative;
+	font-weight: 600;
+	font-size: 0.8em;
+	letter-spacing: 3px;
+	color: $gray-blue;
+	//margin-top: 2em;
+	opacity: 0;
+	width: 90%;
+	text-transform: uppercase;
+	line-height: 1.6;
+	@include animation-slide-up(0.2s);
+}
+
+#hero-button {
+	opacity: 0;
+	@include animation-slide-up(0.4s);
+}
