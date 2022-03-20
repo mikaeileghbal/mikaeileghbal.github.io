@@ -1,0 +1,60 @@
+.section-footer {
+	position: relative;
+	background-color: $green-dark;
+
+	.container {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.footer__gotop {
+	width: 1.5em;
+	height: 1.5em;
+	position: relative;
+	margin-bottom: 2em;
+
+	span {
+		position: absolute;
+		width: 1.5em;
+		height: 1.5em;
+		left: 0px;
+		top: 0px;
+		border-left: 3px solid white;
+		border-top: 3px solid white;
+		transform: rotate(45deg);
+		cursor: pointer;
+		@include transition;
+		&::before {
+			content: "home";
+			position: absolute;
+			font-size: 0.7rem;
+			left: 2px;
+			color: white;
+			bottom: -6px;
+			width: 1.5em;
+			transform: rotate(-45deg);
+			opacity: 0;
+			transform: translateY(-10px);
+			@include transition;
+		}
+	}
+	&:hover span::before {
+		opacity: 1;
+		color: white;
+		transform: translateY(0) rotate(-45deg);
+	}
+	&:hover span {
+		border-color: $red;
+		transform: translateY(-10px) scale(1.2) rotate(45deg);
+		@include transition;
+	}
+}
+
+.footer__copyright p {
+	color: $gray-blue;
+	font-style: italic;
+	font-size: 0.8em;
+}

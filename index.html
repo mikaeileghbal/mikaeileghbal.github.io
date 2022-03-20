@@ -5,12 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Font Awsome 4 Style -->
-
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-
 		<link rel="stylesheet" href="./css/main.css" />
 
 		<title>Document</title>
@@ -21,10 +19,10 @@
 			<div class="container">
 				<a id="logo" class="logo" href="">m</a>
 				<nav class="topnav">
-					<a class="link--top" href="#top">home</a>
+					<a class="link--top active" href="#top">home</a>
 					<a class="link--top" href="#about-section">about</a>
 					<a class="link--top" href="#case-study-section">projects</a>
-					<a class="link--top" href="#">contact</a>
+					<a class="link--top" href="#contact-section">contact</a>
 					<a class="button--resume" href="#">resume</a>
 				</nav>
 				<div class="menu-container menubtn">
@@ -32,20 +30,6 @@
 					<div class="bar2"></div>
 					<div class="bar3"></div>
 				</div>
-
-				<!-- <div class="sidenav">
-          <a class="link--menu" href="index.html">home</a>
-          <a class="link--menu" href="index.html">about me</a>
-          <a class="link--menu" href="index.html">projects</a>
-          <a class="link--menu" href="index.html">contact</a>
-          <a class="link--menu" href="index.html">resume</a>
-          <div class="social">
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
-            <a href=""><i class="fa fa-linkedin"></i></a>
-            <a href=""><i class="fa fa-github"></i></a>
-          </div>
-        </div> -->
 			</div>
 		</header>
 
@@ -58,7 +42,9 @@
 						Hello! I'm a web developer focused on front-end. Mostly I use divide
 						and conquer algorithm to solve my everyday issues.
 					</p>
-					<a id="hero-button" class="button" href="index.html">view my work</a>
+					<a id="hero-button" class="button" href="#case-study-section"
+						>View my work</a
+					>
 				</div>
 			</div>
 		</main>
@@ -95,16 +81,11 @@
 						modern web technologies. I am happy to see you here.
 					</p>
 					<p class="language">
-						I speak <span class="language__item">English</span
-						><img src="images/us.jpg" alt="" />,
-						<span class="language__item">Turkish</span
-						><img src="images/tr.svg" alt="" />,
-						<span class="language__item">Persian</span
-						><img src="images/ir.png" alt="" /> and
-						<span class="language__item">Deutsch</span
-						><img src="images/gr.png" alt="" />
+						I speak <span class="language__item">English</span>,
+						<span class="language__item">Turkish</span>,
+						<span class="language__item">Persian</span> and I am learning
+						<span class="language__item">Deutsch</span>
 					</p>
-
 					<a href="mailto:mikaeileghbal@yahoo.com" class="button" tag="message"
 						><i class="fa fa-envelope"></i>Contact
 					</a>
@@ -118,36 +99,53 @@
 				<h2 class="section-title">projects</h2>
 				<h4 class="section-subtitle">I have built web applications</h4>
 			</div>
-			<div class="project__container">
-				<!-- <figure class="item">
-					<img id="image" class="item__image" src="images/room4.jpg" alt="" />
-					<figcaption class="item__header">
-						<h3 id="title" class="item__title">Calendar</h3>
-						<p id="desc" class="item__desc">
-							Dynamic content manipulating with javascript. Get elements of
-							document, create template and clone copy from template to create
-							new elements.
-						</p>
-						<ul class="item__list" id="tags">
-							<li>html</li>
-							<li>css</li>
-							<li>scss</li>
-							<li>javascripr</li>
-						</ul>
-						<ul class="item__list--links" id="links">
-							<li>
-								<i class="fa fa-cube"></i
-								><a class="link--case" href="">view project</a>
-							</li>
-							<li>
-								<i class="fa fa-github"></i
-								><a class="link--case" href="">view code</a>
-							</li>
-						</ul>
-					</figcaption>
-				</figure> -->
-			</div>
+			<div class="project__container"></div>
 		</section>
+
+		<!-- Contact section -->
+		<section id="contact-section" class="contact-section centered-text">
+			<div class="title-container">
+				<h2 class="section-title">Contact</h2>
+				<h4 class="section-subtitle">Would you like to contact?</h4>
+			</div>
+
+			<p class="contact-text">
+				If you like my work and would like to work together, please send me
+				direct message or contact me through my social links.
+			</p>
+			<a
+				href="mailto:mikaeileghbal@yahoo.com"
+				class="button--email"
+				tag="message"
+				><i class="fa fa-envelope"></i> Send message</a
+			>
+			<article class="contact-social social">
+				<a class="fa fa-facebook" href="http://facebook.com/mikaeileghbal"></a>
+				<a class="fa fa-instagram" href="http://instagram/mikaeil.e"> </a>
+				<a class="fa fa-linkedin" href="http://linkedin.com/mikaeileghbal"> </a>
+				<a class="fa fa-github" href="https://github.com/mikaeileghbal"> </a>
+			</article>
+		</section>
+
+		<!-- Footer section -->
+		<footer class="section-footer centered-text">
+			<div class="container centered-text">
+				<a href="#top">
+					<div class="footer__gotop">
+						<span></span>
+					</div>
+				</a>
+				<div>
+					<a class="link--footer" href="#top">home</a>
+					<a class="link--footer" href="#about-section">about me</a>
+					<a class="link--footer" href="#case-study-section">projects</a>
+					<a class="link--footer" href="#social-section">contact</a>
+				</div>
+				<div class="footer__copyright">
+					<p><span>&COPY; 2021</span>&nbsp;Mikaeil Eghbal</p>
+				</div>
+			</div>
+		</footer>
 
 		<script src="code/index.js"></script>
 	</body>

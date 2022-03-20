@@ -1,4 +1,20 @@
 const App = (function () {
+	const topLinks = document.querySelectorAll(".link--top");
+	topLinks.forEach((link) => {
+		link.addEventListener("click", (e) => {
+			activeTopLink(e.target);
+		});
+	});
+
+	function activeTopLink(elem) {
+		console.log(topLinks);
+		console.log(elem);
+		topLinks.forEach((a) => {
+			a.classList.remove("active");
+		});
+		elem.classList.add("active");
+	}
+
 	const menu = document.querySelector(".menu-container");
 
 	function closeSideMenu() {
@@ -44,10 +60,16 @@ const App = (function () {
 		const scroll =
 			document.documentElement.scrollTop || document.body.scrollTop;
 
+		// Set header style
 		if (scroll > 20) {
 			header.classList.add("slide");
 		} else {
 			header.classList.remove("slide");
+		}
+
+		// Set active top link
+		if (scroll === 0) {
+			activeTopLink(document.querySelectorAll(".link--top")[0]);
 		}
 	}
 
@@ -59,7 +81,7 @@ const App = (function () {
 	let itemObjects = [
 		{
 			title: "calendar",
-			desc: "Dynamic content",
+			desc: "Dynamic Content",
 			tags: ["html", "css", "scss", "javascript"],
 			links: [
 				{ text: "view project", href: "./calendar-planner/index.html" },
@@ -68,11 +90,11 @@ const App = (function () {
 					href: "https://github.com/mikaeileghbal/calendar-planner.git",
 				},
 			],
-			src: "images/calendar.png",
+			src: "./images/calendar.png",
 		},
 		{
 			title: "weather",
-			desc: "Calling public API",
+			desc: "Calling Public API",
 			tags: ["html", "css", "scss", "javascript", "API"],
 			links: [
 				{ text: "view project", href: "./weather-items/index.html" },
@@ -81,7 +103,7 @@ const App = (function () {
 					href: "https://github.com/mikaeileghbal/weather-items.git",
 				},
 			],
-			src: "images/weather-01.png",
+			src: "./images/weather.png",
 		},
 		{
 			title: "wordcounter",
@@ -94,7 +116,7 @@ const App = (function () {
 					href: "https://github.com/mikaeileghbal/wordcounter.git",
 				},
 			],
-			src: "images/wordcounter.png",
+			src: "./images/wordcounter.png",
 		},
 		{
 			title: "worldclock",
@@ -107,7 +129,7 @@ const App = (function () {
 					href: "https://github.com/mikaeileghbal/worldclock.git",
 				},
 			],
-			src: "images/calendar-2.png",
+			src: "./images/worldclock.png",
 		},
 	];
 	// Template for project iotem
