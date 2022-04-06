@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link rel="stylesheet" href="main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="max-width centered">
+			<a class="logo" href="">
+				<h1>News</h1>
+			</a>
+			<ul class="nav">
+				<li><a href="">home</a></li>
+				<li><a href="">portfolio</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">contact</a></li>
+			</ul>
+			<div class="source-container">
+				<label for="source">News Source</label>
+				<select id="source"></select>
+			</div>
+		</header>
+
+		<!-- Articles container -->
+		<div id="load" class="load-container">
+			<div id="loading"></div>
+		</div>
+
+		<div class="button-container max-width centered">
+			<button id="btnViewGrid" class="btnView active">
+				<i class="fa fa-th-large"></i> Grid
+			</button>
+			<button id="btnViewRow" class="btnView">
+				<i class="fa fa-bars"></i> List
+			</button>
+		</div>
+		<main id="main-articles" class="max-width centered"></main>
+
+		<script src="src/index.js" type="module"></script>
+	</body>
+</html>

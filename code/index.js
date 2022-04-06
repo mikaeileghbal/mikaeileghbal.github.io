@@ -94,7 +94,7 @@ const App = (function () {
 		},
 		{
 			title: "weather",
-			desc: "Calling Public API",
+			desc: "Public API",
 			tags: ["html", "css", "scss", "javascript", "API"],
 			links: [
 				{ text: "view project", href: "./weather-items/index.html" },
@@ -130,6 +130,19 @@ const App = (function () {
 				},
 			],
 			src: "./images/worldclock.png",
+		},
+		{
+			title: "news",
+			desc: "Web Components and Public API ",
+			tags: ["html", "css", "scss", "javascript", "API"],
+			links: [
+				{ text: "view project", href: "./news/index.html" },
+				{
+					text: "view code",
+					href: "https://github.com/mikaeileghbal/news.git",
+				},
+			],
+			src: "./images/news.png",
 		},
 	];
 	// Template for project iotem
@@ -175,10 +188,10 @@ const App = (function () {
 		}
 
 		let li = `<li>
-              	<i class="fa fa-cube"></i><a class="link--case" href="${item.links[0].href}">live project</a>
+              	<a class="link--case" href="${item.links[0].href}"><i class="fa fa-cube"></i> live project</a>
             	</li>
             	<li>
-              	<i class="fa fa-github"></i><a class="link--case" href="${item.links[1].href}">view code</a>
+              	<a class="link--case" href="${item.links[1].href}"><i class="fa fa-github"></i> view code</a>
             	</li>`;
 
 		viewlinks.innerHTML = li;

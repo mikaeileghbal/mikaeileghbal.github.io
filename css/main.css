@@ -563,10 +563,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  background-color: white;
+  background-color: #fa7978;
   -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-  border: 1px dashed transparent;
   counter-increment: slide-number;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -586,7 +585,6 @@ main {
 .case-study-section .project__container .item:hover {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border: 1px dashed #fa7978;
 }
 
 .case-study-section .project__container .item:hover .item__header {
@@ -611,12 +609,9 @@ main {
 }
 
 .case-study-section .project__container .item__header {
-  position: absolute;
   width: 100%;
-  height: 36%;
-  left: 0;
-  bottom: 0;
-  padding: 1.25em 1em;
+  height: 100%;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,7 +670,7 @@ main {
 }
 
 .case-study-section .item__image {
-  background-color: white;
+  background-color: #14b1bb80;
   z-index: 1;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
@@ -742,10 +737,6 @@ main {
   background-color: inherit;
   padding: 0;
   margin: 0;
-}
-
-.item__list--links li:hover .fa {
-  color: #fa7978;
 }
 
 .item__list--links li .fa {
