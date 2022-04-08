@@ -36,7 +36,6 @@ async function updateSource() {
 	});
 
 	selectSource.addEventListener("change", (e) => {
-		console.log(e.target.value);
 		triggerEvent(document, "actionstart", {});
 		updateActicles(e.target.value);
 	});
