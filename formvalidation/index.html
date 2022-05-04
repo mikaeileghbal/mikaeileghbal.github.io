@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container max-width centered">
+        <a href="#" class="logo">Logo</a>
+        <ul class="topnav">
+          <span class topnav-text>Would like to know about me?</span>
+          <li><a href="https://mikaeileghbal.github.io/#about">about</a></li>
+          <li><a href="https://mikaeileghbal.github.io">portfolio</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="container max-width centered">
+        <form id="multiPageForm">
+          <h1>Register</h1>
+
+          <div class="tab">
+            Name:
+            <p>
+              <input
+                type="text"
+                placeholder="First name..."
+                title="First name"
+              />
+              <span class="error"></span>
+            </p>
+            <p>
+              <input type="text" placeholder="Last name..." title="Last name" />
+              <span class="error"></span>
+            </p>
+          </div>
+
+          <div class="tab">
+            Contact info:
+            <p>
+              <input type="email" placeholder="Email..." />
+              <span class="error"></span>
+            </p>
+            <p>
+              <input type="tel" placeholder="Phone..." />
+              <span class="error"></span>
+            </p>
+          </div>
+
+          <div class="tab">
+            Birthday:
+            <p>
+              <input type="number" placeholder="dd" />
+              <span class="error"></span>
+            </p>
+            <p>
+              <input type="number" placeholder="mm" />
+              <span class="error"></span>
+            </p>
+            <p>
+              <input type="number" placeholder="yyyy" />
+              <span class="error"></span>
+            </p>
+          </div>
+
+          <div class="tab">
+            Login info:
+            <p>
+              <input type="text" placeholder="username" />
+              <span class="error"></span>
+            </p>
+            <p>
+              <input type="password" placeholder="password" />
+              <span class="error"></span>
+            </p>
+          </div>
+
+          <div class="clearfix">
+            <div class="button-container">
+              <button type="button" id="previous">Previous</button>
+              <button type="button" id="next">Next</button>
+            </div>
+          </div>
+
+          <div class="step-container">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
