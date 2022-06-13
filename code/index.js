@@ -80,6 +80,19 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "color rating ",
+      desc: "react context react router",
+      tags: ["react", "javascript", "context", "router"],
+      links: [
+        { text: "view project", href: "./color-rating/index.html" },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/color-rating.git",
+        },
+      ],
+      src: "./images/colorrating.png",
+    },
+    {
       title: "form validation",
       desc: "form custom validation",
       tags: ["html", "css", "scss", "javascript"],
