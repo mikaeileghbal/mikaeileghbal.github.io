@@ -84,7 +84,7 @@ const App = (function () {
       desc: "react context react router",
       tags: ["react", "javascript", "context", "router"],
       links: [
-        { text: "view project", href: "./color-rating/index.html" },
+        { text: "view project", href: "./color-rating/" },
         {
           text: "view code",
           href: "https://github.com/mikaeileghbal/color-rating.git",
