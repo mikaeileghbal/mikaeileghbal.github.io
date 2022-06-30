@@ -81,8 +81,8 @@ const App = (function () {
   let itemObjects = [
     {
       title: "my notes ",
-      desc: "react context hooks",
-      tags: ["react", "javascript", "context", "hooks"],
+      desc: "react context hooks webpack",
+      tags: ["react", "javascript", "context", "hooks", "webpack"],
       links: [
         { text: "view project", href: "./mynotes/" },
         {
@@ -120,8 +120,8 @@ const App = (function () {
     },
     {
       title: "calendar",
-      desc: "Dynamic Content",
-      tags: ["html", "css", "scss", "javascript"],
+      desc: "Dynamic Content Webpack",
+      tags: ["html", "css", "scss", "javascript", "webpack"],
       links: [
         { text: "view project", href: "./calendar-planner/index.html" },
         {
