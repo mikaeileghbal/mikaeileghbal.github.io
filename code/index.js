@@ -80,6 +80,19 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "my notes ",
+      desc: "react context hooks",
+      tags: ["react", "javascript", "context", "hooks"],
+      links: [
+        { text: "view project", href: "./mynotes/" },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/mynotes.git",
+        },
+      ],
+      src: "./images/mynotes.png",
+    },
+    {
       title: "color rating ",
       desc: "react context react router",
       tags: ["react", "javascript", "context", "router"],
