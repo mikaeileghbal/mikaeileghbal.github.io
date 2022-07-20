@@ -1,0 +1,49 @@
+.section-story {
+  padding: 90px 0;
+  position: relative;
+  z-index: 1;
+
+  .row {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    z-index: 3;
+  }
+
+  .story-title {
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .story-box {
+    padding: 60px 90px;
+    width: 46.5%;
+    background-color: white;
+
+    h6 {
+      color: #222;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #777;
+      margin-bottom: 16px;
+    }
+    a {
+      padding: 8px 30px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/story-bg.jpg.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+}

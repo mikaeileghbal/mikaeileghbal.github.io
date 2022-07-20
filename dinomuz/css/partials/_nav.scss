@@ -1,0 +1,108 @@
+nav {
+  transform: scale(0);
+  margin-right: 70px;
+  transform-origin: 100% 50%;
+  @include transition;
+
+  a {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(2155, 255, 255, 0.7);
+    margin: 0 25px;
+    @include transition;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.btn {
+  line-height: 40px;
+  padding: 0 30px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #222222;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  @include transition;
+
+  span {
+    color: #fff;
+  }
+
+  span:nth-child(1) {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+}
+
+.btn-hero {
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: $gradient;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    @include transition;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.btn-gradient {
+  background-image: $gradient;
+}
+
+.arrow-right::before {
+  content: "\2192";
+}
+
+/* menu-bar styles */
+
+.menu-icon {
+  flex-direction: column;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2px 0;
+  @include transition;
+}
+
+.menu-icon.open > .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+.menu-icon.open > .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open > .menu-bar:nth-child(3) {
+  transform: rotate(315deg) translate(5px, -3px);
+}
+
+nav.active {
+  transform: scale(1);
+}
+
+.menu-icon.open {
+  width: 23px;
+}

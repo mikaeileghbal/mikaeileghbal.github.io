@@ -1,0 +1,46 @@
+.section-subscribe {
+  padding: 100px 0;
+  background-color: white;
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    color: #222;
+  }
+
+  p {
+    color: #777;
+  }
+
+  a {
+    color: white;
+    position: absolute;
+    right: 1.25em;
+  }
+
+  .form-container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  input {
+    padding: 0 184px 0 25px;
+    line-height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f9f9ff;
+    color: #777;
+    font-size: 14px;
+    width: 100%;
+  }
+}
