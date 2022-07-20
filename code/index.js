@@ -80,6 +80,19 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "dinomuz",
+      desc: "html scss javascript",
+      tags: ["html", "javascript", "scss"],
+      links: [
+        { text: "view project", href: "./dinomuz/index.html" },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/dinomuz.git",
+        },
+      ],
+      src: "./images/dinomuz.png",
+    },
+    {
       title: "my notes ",
       desc: "react context hooks webpack",
       tags: ["react", "javascript", "context", "hooks", "webpack"],
