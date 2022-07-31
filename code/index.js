@@ -80,6 +80,19 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "quiz",
+      desc: "html scss javascript",
+      tags: ["html", "javascript", "scss"],
+      links: [
+        { text: "view project", href: "./quiz/index.html" },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/quiz.git",
+        },
+      ],
+      src: "./images/quiz.png",
+    },
+    {
       title: "dinomuz",
       desc: "html scss javascript",
       tags: ["html", "javascript", "scss"],
