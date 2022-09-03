@@ -80,6 +80,19 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "githubuserprofile",
+      desc: "react chart api",
+      tags: ["react", "javascript", "chart", "api"],
+      links: [
+        { text: "view project", href: "./githubuserprofile/index.html" },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/github-user-profile.git",
+        },
+      ],
+      src: "./images/githubuser.png",
+    },
+    {
       title: "quiz",
       desc: "html scss javascript",
       tags: ["html", "javascript", "scss"],
