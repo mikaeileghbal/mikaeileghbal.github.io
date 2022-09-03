@@ -80,7 +80,7 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
-      title: "githubuserprofile",
+      title: "github user profile",
       desc: "react chart api",
       tags: ["react", "javascript", "chart", "api"],
       links: [
