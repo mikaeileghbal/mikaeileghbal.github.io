@@ -76,7 +76,7 @@ footer {
   color: #222;
   position: relative;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 2em;
   letter-spacing: 2px;
 }
 
@@ -202,14 +202,27 @@ header.slide {
 }
 
 .link, .logo, .link--case, .link--top, .link--footer {
-  font-weight: 400;
+  position: relative;
+  font-weight: 600;
   font-size: 1.2em;
   letter-spacing: 2px;
   text-decoration: none;
-  padding: 8px 8px;
+  padding: 8px 0;
   margin: 18px 0;
   color: rgb(248, 248, 248);
   transition: color 0.2s;
+}
+.link:before, .logo:before, .link--case:before, .link--top:before, .link--footer:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 100%;
+  height: 4px;
+  background-color: #fa7978;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.2s;
 }
 .link--top, .link--footer {
   display: block;
@@ -217,25 +230,26 @@ header.slide {
 }
 @media screen and (min-width: 768px) {
   .link--top, .link--footer {
-    font-size: 0.8em;
+    font-size: 0.9rem;
     margin: 0;
     margin-right: 2.4em;
-    padding: 8px 8px;
   }
 }
 .link--top:hover, .link--footer:hover {
   color: #fa7978;
-  text-decoration: underline;
+}
+.link--top:hover::before, .link--footer:hover::before {
+  transform: scaleX(1);
 }
 .link--footer {
   font-size: 0.8em;
   margin: 0;
-  padding: 0.5em;
+  padding: 0.5em 0;
 }
 @media screen and (min-width: 480px) {
   .link--footer {
     display: inline-block;
-    margin: 0 1em;
+    margin: 0 1.2em;
   }
 }
 .link--case {
@@ -254,7 +268,9 @@ header.slide {
 
 .link--top.active {
   color: #fa7978;
-  border: 1px dashed #fa7978;
+}
+.link--top.active::before {
+  transform: scaleX(1);
 }
 
 .button, .button--email, .button--resume {
@@ -268,14 +284,15 @@ header.slide {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1) inset;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .button:hover, .button--email:hover, .button--resume:hover {
-  background-color: rgba(255, 255, 255, 0.2);
   background-color: #fa7978;
+  color: white;
 }
 .button--resume {
   display: inline-block;
+  font-weight: 500;
   font-size: 0.9rem;
   padding: 1em 3em;
   align-self: center;
@@ -480,8 +497,9 @@ main {
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #fa7978;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
   counter-increment: slide-number;
   transition: all 0.3s;
 }
@@ -513,7 +531,7 @@ main {
   transform: translateY(-20px);
 }
 .case-study-section .project__container .item:hover .item__image {
-  transform: translateY(-4px);
+  transform: scale(1.1);
 }
 .case-study-section .project__container .item__header {
   width: 100%;
@@ -524,6 +542,7 @@ main {
   justify-content: center;
   align-items: center;
   background-color: white;
+  border-top: 1px solid #d8d8d8;
   opacity: 1;
   text-align: center;
   z-index: 2;
@@ -559,7 +578,7 @@ main {
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .case-study-section .item__image {
-  background-color: rgba(20, 177, 187, 0.5019607843);
+  background-color: white;
   z-index: 1;
   opacity: 1;
   transition: all 0.2s ease-in-out;
