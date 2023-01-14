@@ -1,25 +1,35 @@
 .about-section {
-	background-color: $green-middle;
+  //background-color: $green-middle;
 
-	@include mobile {
-		padding: 7em 1.5em;
-	}
-	@include tablet {
-		padding: 7em 0em;
-	}
+  @include mobile {
+    padding: 7em 1.5em;
+  }
+  @include tablet {
+    padding: 7em 0em;
+  }
 
-	.about-info {
-		max-width: 700px;
-		margin: 0 auto;
-	}
+  .about-info {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .about-image {
-	img {
-		margin-top: 3em;
-		margin-bottom: 1.5em;
-		width: 200px;
-		border-radius: 50%;
-		filter: brightness(1.2) grayscale(0.3) opacity(0.8);
-	}
+  cursor: pointer;
+
+  img {
+    display: inline-block;
+    transform: scale(1);
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    width: 200px;
+    border-radius: 50%;
+    @include transition;
+    perspective: 1000px;
+    filter: brightness(1.2) grayscale(0.3) opacity(0.8);
+
+    &:hover {
+      transform: rotateZ(20deg);
+    }
+  }
 }

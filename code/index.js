@@ -224,9 +224,11 @@ const App = (function () {
     },
   ];
   // Template for project iotem
+
+  //<img id="image" class="item__image" src="images/room4.jpg" alt="">
   itemTemplate.innerHTML = `
 							<figure class="item">
-               	<img id="image" class="item__image" src="images/room4.jpg" alt="">
+               	<img id="image" class="item__image" src="" alt="">
                 <figcaption class="item__header">
                     <h3 id="title" class="item__title">Calendar</h3>
                     <p id="desc" class="item__desc">Dynamic content manipulating with javascript. Get elements of
@@ -242,7 +244,8 @@ const App = (function () {
             	</figure>`;
 
   // Iterate projects array and create each element
-  for (let i = 0; i < itemObjects.length; i++) {
+  for (let i = 0; i < 6; i++) {
+    // itemObjects.length
     projectcontainer.appendChild(createItem(itemObjects[i]));
   }
 
@@ -256,7 +259,7 @@ const App = (function () {
     let tags = newItem.querySelector("#tags");
     let viewlinks = newItem.querySelector("#viewlinks");
 
-    image.src = item.src;
+    //image.src = item.src;
     title.textContent = item.title;
     desc.textContent = item.desc;
     for (let i = 0; i < item.tags.length; i++) {

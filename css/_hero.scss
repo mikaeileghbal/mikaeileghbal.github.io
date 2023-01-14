@@ -1,74 +1,84 @@
 main {
-	height: 100vh;
-	background-color: aqua;
-	margin: 0;
+  height: 100vh;
+  background-color: $blue-dark;
+  margin: 0;
 }
-.hero {
-	position: relative;
 
-	height: 100%;
-	background-color: $green-dark;
-	// background-image: url("../images/land-mount.jpg");
-	// background-position: center;
-	// background-repeat: no-repeat;
-	// background-size: cover;
-	// //background-blend-mode: color-burn;
-	// background-blend-mode: exclusion;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.hero {
+  position: relative;
+  margin: auto;
+  max-width: 1048px;
+  height: 100%;
+  //  background-color: $blue-dark;
+  // background-image: url("../images/land-mount.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // //background-blend-mode: color-burn;
+  // background-blend-mode: exclusion;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+
 .hero-container {
-	max-width: 600px;
-	padding: 1em;
-	margin: auto;
-	text-align: center;
-	color: white;
-	background-color: rgba(0, 0, 0, 0);
-	* {
-		display: inline-block;
-		margin: 16px 0;
-	}
+  //max-width: 1048px;
+  padding: 1em;
+  //margin: auto 0;
+  text-align: left;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hero-title,
+.hero-subtitle {
+  font-weight: 800;
+  font-size: 2vw;
+  opacity: 0;
+  line-height: 1.25;
 }
 
 .hero-title {
-	position: relative;
-	font-weight: 500;
-	font-size: 1.5em;
-	letter-spacing: 6px;
-	color: white;
-	opacity: 0;
-	line-height: 0.9em;
-	pointer-events: none;
-	text-transform: uppercase;
+  color: $green-text;
+  @include animation-slide-up(0s);
 
-	@include animation-slide-up(0s);
+  @include mobile {
+    font-size: 3vw;
+  }
 
-	@include mobile {
-		font-size: 2.2em;
-	}
-
-	@include tablet {
-		font-size: 3em;
-	}
+  @include tablet {
+    font-size: 4.5vw;
+  }
 }
 
 .hero-subtitle {
-	position: relative;
-	font-weight: 600;
-	font-size: 0.8em;
-	letter-spacing: 3px;
-	//color: $gray-blue;
-	color: $gray-blue;
-	//margin-top: 2em;
-	opacity: 0;
-	width: 90%;
-	text-transform: uppercase;
-	line-height: 1.6;
-	@include animation-slide-up(0.2s);
+  color: $gray-blue;
+
+  @include animation-slide-up(0.2s);
+
+  @include mobile {
+    font-size: 3vw;
+  }
+
+  @include tablet {
+    font-size: 4.5vw;
+  }
+}
+
+.hero-text {
+  max-width: 500px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: $gray-blue;
+  opacity: 0;
+  line-height: 1.6;
+  margin-top: 1.6em;
+  margin-bottom: 4em;
+  @include animation-slide-up(0.4s);
 }
 
 #hero-button {
-	opacity: 0;
-	@include animation-slide-up(0.4s);
+  opacity: 0;
+
+  @include animation-slide-up(0.6s);
 }

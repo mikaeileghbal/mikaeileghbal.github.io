@@ -1,60 +1,57 @@
 .section-footer {
-	position: relative;
-	background-color: $green-dark;
+  position: relative;
+  //background-color: $green-dark;
+  padding: 0;
 
-	.container {
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-		align-items: center;
-	}
+  .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer__gotop {
-	width: 1.5em;
-	height: 1.5em;
-	position: relative;
-	margin-bottom: 2em;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-bottom: 2em;
 
-	span {
-		position: absolute;
-		width: 1.5em;
-		height: 1.5em;
-		left: 0px;
-		top: 0px;
-		border-left: 3px solid white;
-		border-top: 3px solid white;
-		transform: rotate(45deg);
-		cursor: pointer;
-		@include transition;
-		&::before {
-			content: "home";
-			position: absolute;
-			font-size: 0.7rem;
-			left: 2px;
-			color: white;
-			bottom: -6px;
-			width: 1.5em;
-			transform: rotate(-45deg);
-			opacity: 0;
-			transform: translateY(-10px);
-			@include transition;
-		}
-	}
-	&:hover span::before {
-		opacity: 1;
-		color: white;
-		transform: translateY(0) rotate(-45deg);
-	}
-	&:hover span {
-		border-color: $red;
-		transform: translateY(-10px) scale(1.2) rotate(45deg);
-		@include transition;
-	}
+  a {
+    text-decoration: none;
+    color: $blue-dark;
+    background-color: $green-text;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @include transition;
+    &:hover {
+      background-color: $green-hover;
+    }
+  }
+  span {
+    cursor: pointer;
+
+    @include transition;
+    &::before {
+      content: "🔝";
+      text-align: center;
+      color: $blue-dark;
+      font-size: 2rem;
+      @include transition;
+    }
+  }
+  &:hover span::before {
+  }
 }
 
 .footer__copyright p {
-	color: $gray-blue;
-	font-style: italic;
-	font-size: 0.8em;
+  color: #525e65;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  margin-bottom: 5em;
+  margin-top: 0em;
 }

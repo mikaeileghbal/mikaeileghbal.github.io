@@ -1,19 +1,23 @@
 header {
-	background-color: $green-dark;
-	padding: 1.6em $container-padding-left-right;
-	position: fixed;
-	z-index: 20;
-	width: 100%;
-	@include transition;
+  background-color: $green-gray;
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 $container-padding-left-right;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  @include transition;
 
-	.container {
-		position: relative;
-		display: flex;
-		align-items: center;
-	}
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 }
 
 header.slide {
-	padding: 0.6em $container-padding-left-right;
-	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //padding: 0em $container-padding-left-right;
+  color: rgb(82, 94, 101);
+  //box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(82, 94, 101, 0.98);
 }
