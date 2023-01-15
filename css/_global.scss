@@ -36,6 +36,10 @@ $mobile-width: 480px;
 $small-mobile-width: 360px;
 $tiny-mobile-width: 330px;
 
+@mixin shadow {
+  box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+}
+
 @mixin transition {
   transition: all 0.2s ease-in-out;
 }

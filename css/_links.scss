@@ -147,6 +147,7 @@
   align-items: center;
   color: $blue-dark;
   background-color: $green-text;
+  @include shadow;
   @include transition;
   &:hover {
     background-color: $green-hover;

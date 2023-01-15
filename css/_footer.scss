@@ -1,9 +1,30 @@
 .section-footer {
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120rem;
+    width: 200vw;
+    height: 120rem;
+    height: 200vw;
+    margin-left: -60rem;
+    margin-left: -100vw;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #2e3445;
+  }
+
   position: relative;
   //background-color: $green-dark;
   padding: 0;
 
   .container {
+    padding-top: 2em;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -27,24 +48,16 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
+    @include shadow;
     @include transition;
     &:hover {
       background-color: $green-hover;
     }
-  }
-  span {
-    cursor: pointer;
 
-    @include transition;
-    &::before {
-      content: "🔝";
-      text-align: center;
-      color: $blue-dark;
-      font-size: 2rem;
-      @include transition;
+    .fa {
+      margin: 0;
     }
-  }
-  &:hover span::before {
   }
 }
 
@@ -53,5 +66,5 @@
   font-size: 0.8em;
   letter-spacing: 0;
   margin-bottom: 5em;
-  margin-top: 0em;
+  margin-top: 1.5em;
 }
