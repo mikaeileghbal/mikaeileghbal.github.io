@@ -48,8 +48,6 @@ main {
   //max-width: 1048px;
   padding: 1em;
   //margin: auto 0;
-  text-align: center;
-
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -59,6 +57,7 @@ main {
   font-size: 2vw;
   opacity: 0;
   line-height: 1;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: $green-text;
@@ -106,6 +105,6 @@ main {
 
 #hero-button {
   opacity: 0;
-
+  margin: 0 auto;
   @include animation-slide-up(0.6s);
 }

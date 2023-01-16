@@ -43,6 +43,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #222733;
   color: #dbe8d4;
+  text-align: left;
 }
 
 ::-webkit-scrollbar {
@@ -93,14 +94,10 @@ footer {
 
 p {
   font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: justify;
   line-height: 1.7;
-  margin-top: 3em;
-  margin-bottom: 1.5em;
-}
-p + p {
-  margin-top: 1.5em;
-  margin-bottom: 3em;
+  margin-top: 1em;
 }
 
 header {
@@ -386,7 +383,6 @@ main::before {
 
 .hero-container {
   padding: 1em;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -396,6 +392,7 @@ main::before {
   font-size: 2vw;
   opacity: 0;
   line-height: 1;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #dbe8d4;
@@ -467,6 +464,7 @@ main::before {
 
 #hero-button {
   opacity: 0;
+  margin: 0 auto;
   -webkit-animation: slide-up;
           animation: slide-up;
   -webkit-animation-delay: 0.6s;
@@ -488,8 +486,9 @@ main::before {
   }
 }
 .about-section .about-info {
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .about-image {
@@ -725,7 +724,7 @@ main::before {
 
 .contact-text {
   margin: 3em auto;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .section-footer {
