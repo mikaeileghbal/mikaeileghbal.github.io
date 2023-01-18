@@ -269,20 +269,24 @@ header.slide {
 }
 
 .button, .button--email, .button--resume {
+  font-family: inherit;
   text-decoration: none;
-  padding: 1em 2em;
+  padding: 1.2em 3em;
   font-weight: 800;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
+  font-size: 12px;
+  text-transform: uppercase;
   color: #222733;
-  background-color: #dbe8d4;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  background-color: #73cca8;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 3px 0 0 #2c7a5a, 0 7px 0 0 black;
 }
 .button:hover, .button--email:hover, .button--resume:hover {
-  background-color: #73cca8;
-  border-color: #73cca8;
+  background-color: #60c59c;
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 0 #2c7a5a, 0 6px 0 0 black;
 }
 .button--resume {
   display: inline-block;
@@ -375,15 +379,31 @@ main::before {
   max-width: 1048px;
   margin: 1.5em auto;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container,
+.hero-button-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-container {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0);
+  flex: 1 1 70%;
+  padding-bottom: 5.6em;
+}
+
+.hero-button-wrap {
+  text-align: center;
+  flex: 1 1 30%;
+  padding-bottom: 6em;
 }
 
 .hero-title,
@@ -393,12 +413,12 @@ main::before {
   opacity: 0;
   line-height: 1;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: #dbe8d4;
 }
 
 .hero-title {
+  font-weight: 600;
+  margin-bottom: 0.3em;
   -webkit-animation: slide-up;
           animation: slide-up;
   -webkit-animation-delay: 0s;
@@ -415,7 +435,7 @@ main::before {
 }
 @media screen and (min-width: 768px) {
   .hero-title {
-    font-size: 7vw;
+    font-size: 2vw;
   }
 }
 
@@ -444,14 +464,15 @@ main::before {
 }
 
 .hero-text {
-  max-width: 500px;
-  font-weight: 500;
+  color: #848583;
+  max-width: 800px;
+  font-weight: 400;
   margin: 0 auto;
   font-size: 1rem;
   opacity: 0;
   line-height: 1.6;
-  margin-top: 40vh;
-  margin-bottom: 2em;
+  text-align: center;
+  margin-top: 0.4em;
   -webkit-animation: slide-up;
           animation: slide-up;
   -webkit-animation-delay: 0.4s;
