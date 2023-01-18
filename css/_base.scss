@@ -52,21 +52,21 @@ footer {
   //color: white;
   text-transform: capitalize;
   position: relative;
-  font-weight: 600;
-  font-size: 2em;
-  //letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 0.3em;
 }
 
 .section-subtitle {
   @extend %title;
-  //color: $green-dark;
-  color: $gray-blue;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 3.5px;
-  word-spacing: 2px;
+  color: $gray-dark;
+  font-weight: 400;
+  font-size: 1rem;
+  //letter-spacing: 3.5px;
+  //word-spacing: 2px;
   margin-top: 0.8em;
   opacity: 0.7;
+  text-align: center;
 }
 
 p {
@@ -75,4 +75,32 @@ p {
   text-align: justify;
   line-height: 1.7;
   margin-top: 1em;
+}
+
+.text {
+  color: $gray-dark;
+  max-width: 800px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 auto;
+  opacity: 0;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 0.4em;
+  @include animation-slide-up(0.4s);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -2px;
+}
+
+button,
+a {
+  font-family: "Montserrat", sans-serif;
 }

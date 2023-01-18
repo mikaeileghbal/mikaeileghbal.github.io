@@ -1,3 +1,5 @@
+import * as portfolio from "./portfolio.js";
+
 const App = (function () {
   const topLinks = document.querySelectorAll(".link--top");
   topLinks.forEach((link) => {
@@ -227,7 +229,7 @@ const App = (function () {
 
   //<img id="image" class="item__image" src="images/room4.jpg" alt="">
   itemTemplate.innerHTML = `
-							<figure class="item">
+  						<figure class="item">
                	<img id="image" class="item__image" src="" alt="">
                 <figcaption class="item__header">
                     <h3 id="title" class="item__title">Calendar</h3>
@@ -244,7 +246,7 @@ const App = (function () {
             	</figure>`;
 
   // Iterate projects array and create each element
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < itemObjects.length; i++) {
     // itemObjects.length
     projectcontainer.appendChild(createItem(itemObjects[i]));
   }
@@ -259,7 +261,7 @@ const App = (function () {
     let tags = newItem.querySelector("#tags");
     let viewlinks = newItem.querySelector("#viewlinks");
 
-    //image.src = item.src;
+    image.src = item.src;
     title.textContent = item.title;
     desc.textContent = item.desc;
     for (let i = 0; i < item.tags.length; i++) {
@@ -269,10 +271,10 @@ const App = (function () {
     }
 
     let li = `<li>
-              	<a class="link--case" href="${item.links[0].href}"><i class="fa fa-cube"></i> live project</a>
+              	<a class="button" href="${item.links[0].href}"><i class="fa fa-cube"></i> live project</a>
             	</li>
             	<li>
-              	<a class="link--case" href="${item.links[1].href}"><i class="fa fa-github"></i> view code</a>
+              	<a class="button" href="${item.links[1].href}"><i class="fa fa-github"></i> view code</a>
             	</li>`;
 
     viewlinks.innerHTML = li;

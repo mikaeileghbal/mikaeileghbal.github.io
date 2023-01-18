@@ -19,6 +19,7 @@ main {
     border-radius: 50%;
     background-color: #2e3445;
     box-shadow: none;
+
     // background-image: url(../../img/starwheel.svg?1418951467);
     // background-size: 100%;
     // background-repeat: no-repeat;
@@ -76,7 +77,7 @@ main {
 }
 
 .hero-title {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.3em;
   @include animation-slide-up(0s);
 
@@ -85,7 +86,7 @@ main {
   }
 
   @include tablet {
-    font-size: 2vw;
+    font-size: 29px;
   }
 }
 
@@ -103,19 +104,6 @@ main {
   @include tablet {
     font-size: 1.2vw;
   }
-}
-
-.hero-text {
-  color: $gray-dark;
-  max-width: 800px;
-  font-weight: 400;
-  margin: 0 auto;
-  font-size: 1rem;
-  opacity: 0;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 0.4em;
-  @include animation-slide-up(0.4s);
 }
 
 #hero-button {

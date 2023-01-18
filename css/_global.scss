@@ -12,7 +12,10 @@ $overlay: #14b1bb80;
 //$red: #fa7978;
 $red: $gray-blue;
 
-$gray-dark: #848583;
+//$gray-dark: #848583;
+$gray-dark: #6c838d;
+//$gray-dark: #525a6e;
+
 $green-gray: #525e65;
 $green-text: #dbe8d4;
 $blue-dark: #222733;
@@ -112,5 +115,14 @@ $tiny-mobile-width: 330px;
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(800px, 120px, 50px);
   }
 }

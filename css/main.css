@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 @-webkit-keyframes slide-up {
   from {
     opacity: 0;
@@ -21,6 +22,22 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(800px, 120px, 50px);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(800px, 120px, 50px);
   }
 }
 :root {
@@ -78,18 +95,18 @@ footer {
 .section-title {
   text-transform: capitalize;
   position: relative;
-  font-weight: 600;
-  font-size: 2em;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 0.3em;
 }
 
 .section-subtitle {
-  color: rgb(187, 191, 205);
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 3.5px;
-  word-spacing: 2px;
+  color: #6c838d;
+  font-weight: 400;
+  font-size: 1rem;
   margin-top: 0.8em;
   opacity: 0.7;
+  text-align: center;
 }
 
 p {
@@ -98,6 +115,41 @@ p {
   text-align: justify;
   line-height: 1.7;
   margin-top: 1em;
+}
+
+.text {
+  color: #6c838d;
+  max-width: 800px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 auto;
+  opacity: 0;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 0.4em;
+  -webkit-animation: slide-up;
+          animation: slide-up;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -2px;
+}
+
+button,
+a {
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -201,7 +253,8 @@ header.slide {
 
 .link, .logo, .link--case, .link--top, .link--footer {
   position: relative;
-  font-weight: 400;
+  position: relative;
+  font-weight: 600;
   font-size: 1.4em;
   text-decoration: none;
   margin: 0;
@@ -213,6 +266,7 @@ header.slide {
   content: "";
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0px;
   width: 100%;
   height: 4px;
@@ -220,6 +274,8 @@ header.slide {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: 0.2s;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .link--top, .link--footer {
   display: block;
@@ -269,7 +325,6 @@ header.slide {
 }
 
 .button, .button--email, .button--resume {
-  font-family: inherit;
   text-decoration: none;
   padding: 1.2em 3em;
   font-weight: 800;
@@ -286,7 +341,7 @@ header.slide {
 .button:hover, .button--email:hover, .button--resume:hover {
   background-color: #60c59c;
   transform: translateY(1px);
-  box-shadow: 0 2px 0 0 #2c7a5a, 0 6px 0 0 black;
+  box-shadow: 0 2px 0 0 #2c7a5a, 0 5px 0 0 black;
 }
 .button--resume {
   display: inline-block;
@@ -417,7 +472,7 @@ main::before {
 }
 
 .hero-title {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.3em;
   -webkit-animation: slide-up;
           animation: slide-up;
@@ -435,7 +490,7 @@ main::before {
 }
 @media screen and (min-width: 768px) {
   .hero-title {
-    font-size: 2vw;
+    font-size: 29px;
   }
 }
 
@@ -461,26 +516,6 @@ main::before {
   .hero-subtitle {
     font-size: 1.2vw;
   }
-}
-
-.hero-text {
-  color: #848583;
-  max-width: 800px;
-  font-weight: 400;
-  margin: 0 auto;
-  font-size: 1rem;
-  opacity: 0;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 0.4em;
-  -webkit-animation: slide-up;
-          animation: slide-up;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 #hero-button {
@@ -534,30 +569,26 @@ main::before {
   font-weight: 800;
   font-size: 1.5rem;
 }
-.case-study-section p {
-  color: #dbe8d4;
-}
 .case-study-section .project__container {
   padding: 0em 0.5em;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 8em auto 5em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  row-gap: 1em;
-  -moz-column-gap: 1em;
-       column-gap: 1em;
+  row-gap: 2.8em;
+  -moz-column-gap: 2.8em;
+       column-gap: 2.8em;
   counter-reset: slide-number;
 }
 .case-study-section .project__container .item {
-  height: 300px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
-  border-radius: 4px;
   background-color: #2e3445;
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 8px 10px 0px rgba(2, 12, 27, 0.4), inset 8px 10px 10px rgba(2, 12, 27, 0.4);
   counter-increment: slide-number;
   transition: all 0.3s;
 }
@@ -571,13 +602,8 @@ main::before {
   color: rgba(255, 255, 255, 0.2);
   z-index: 2;
 }
-.case-study-section .project__container .item:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px);
-}
 .case-study-section .project__container .item:hover .item__header {
   transform: translateY(0px);
-  opacity: 1;
 }
 .case-study-section .project__container .item:hover .item__header > h3 {
   opacity: 0;
@@ -589,9 +615,6 @@ main::before {
   opacity: 1;
   transform: translateY(-20px);
 }
-.case-study-section .project__container .item:hover .item__image {
-  transform: scale(1.1);
-}
 .case-study-section .project__container .item__header {
   width: 100%;
   height: 100%;
@@ -600,10 +623,11 @@ main::before {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  opacity: 1;
+  background-color: rgba(10, 10, 10, 0.8);
+  transform: translateY(-100%);
   text-align: center;
   z-index: 2;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .case-study-section .project__container .item__header h3 {
   position: relative;
@@ -629,8 +653,15 @@ main::before {
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .case-study-section .item__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.2s ease-in-out;
 }
 
