@@ -605,6 +605,7 @@ main::before {
 .case-study-section .project__container .item:hover .item__list, .case-study-section .project__container .item:hover .item__list--links {
   opacity: 1;
   transform: translateY(-20px);
+  transition: transform 0.225s cubic-bezier(0.65, 1.55, 0.5, 1.3) 0.3s, opacity 0.1s ease-out 0.3s;
 }
 .case-study-section .project__container h3 {
   color: #6c838d;
@@ -660,7 +661,18 @@ main::before {
   height: 90%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.75) inset;
 }
+.case-study-section .item__image__wrapp::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.75) inset;
+}
 .case-study-section .item__image {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -682,9 +694,8 @@ main::before {
   align-items: center;
   margin-top: 0;
   padding: 0 1em;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(0px);
-  transition: transform 0.225s cubic-bezier(0.65, 1.55, 0.5, 1.3) 0.3s, opacity 0.1s ease-out 0.3s;
 }
 .item__list li, .item__list--links li {
   font-size: 0.8em;
@@ -702,6 +713,7 @@ main::before {
   display: flex;
   padding: 1em 2em;
   justify-content: space-between;
+  opacity: 0;
   width: 100%;
 }
 .item__list--links li {
