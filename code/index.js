@@ -240,7 +240,7 @@ const App = (function () {
                         template and clone
                         copy from template to create new elements.
                     </p>
-                    <ul class="item__list" id="tags">
+                    <ul class="tags" id="tags">
                     </ul>
                     <ul class="item__list--links" id="viewlinks">
                     </ul>
@@ -269,6 +269,7 @@ const App = (function () {
     for (let i = 0; i < item.tags.length; i++) {
       let li = document.createElement("li");
       li.innerText = item.tags[i];
+      li.className = "button tag__item";
       tags.append(li);
     }
 
