@@ -52,21 +52,6 @@
       margin: 0 1.2em;
     }
   }
-  &--case {
-    @extend .link;
-    color: $green-dark;
-    font-size: 1em;
-    font-weight: 500;
-    margin-right: 0em;
-    opacity: 0.7;
-    letter-spacing: 0;
-    text-transform: capitalize;
-
-    &:hover {
-      color: $red;
-      text-decoration: underline;
-    }
-  }
 }
 .link--top.active {
   color: $green-hover;
@@ -122,6 +107,10 @@
     @extend .button;
     display: inline-block;
     margin-bottom: 2em;
+  }
+
+  &--case {
+    padding: 0.6em 1em;
   }
 }
 

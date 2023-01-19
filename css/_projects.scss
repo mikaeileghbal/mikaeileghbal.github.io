@@ -21,7 +21,7 @@
     counter-reset: slide-number;
 
     .item {
-      height: 200px;
+      height: 240px;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -50,6 +50,7 @@
 
       &:hover .item__header {
         transform: translateY(0px);
+        opacity: 1;
         //background-color: rgba(10, 10, 10, 0.7);
       }
       &:hover .item__header > h3 {
@@ -67,10 +68,28 @@
       }
     }
 
+    h3 {
+      color: $gray-dark;
+      background-color: aliceblue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      //height: 10%;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      user-select: none;
+      padding: 0.4em 1em;
+      // transition: opacity 0.2s;
+      z-index: 9;
+    }
     .item__header {
+      margin-top: 1em;
       width: 100%;
       height: 100%;
-      padding: 0;
+      padding: 5em 0 1em;
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -78,25 +97,19 @@
       background-color: rgba(10, 10, 10, 0.8);
       //border-top: 1px solid #d8d8d8;
       transform: translateY(-100%);
+      opacity: 0;
       text-align: center;
       z-index: 2;
-      transition: all 0.15s $transition-func;
+      //transition: opacity 0.1s linear, transform 0.125s ease-out; //$transition-func;
+      transform-style: flat;
+      transition: opacity 0.15s ease-out,
+        transform 0.25s cubic-bezier(0, 0.75, 0, 1);
 
-      h3 {
-        //color: $black;
-        position: relative;
-        font-weight: 600;
-        font-size: 1.2em;
-        text-transform: capitalize;
-        user-select: none;
-        opacity: 1;
-        margin-top: 1.5em;
-        transition: opacity 0.2s;
-      }
       p {
         opacity: 1;
         margin: 2px 0em 10px;
         //color: black;
+        text-transform: capitalize;
         user-select: none;
         transform: translateY(0px);
         transition: opacity 0.3s $transition-func,
@@ -104,16 +117,21 @@
       }
     }
   }
-  .item__image {
-    //background-color: white;
+  .item__image__wrapp {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.75) inset;
+  }
+
+  .item__image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     z-index: 1;
     opacity: 1;
-    object-fit: cover;
     @include transition;
   }
 }
@@ -127,11 +145,14 @@
   display: none;
   justify-content: flex-start;
   align-items: center;
-  margin-top: -1em;
+  margin-top: 0;
+  padding: 0 1em;
   //background-color: white;
   opacity: 0;
   transform: translateY(0px);
-  transition: transform 0.2s $transition-func, opacity 0.2s $transition-func;
+  //transition: transform 0.2s $transition-func, opacity 0.2s $transition-func;
+  transition: transform 0.225s cubic-bezier(0.65, 1.55, 0.5, 1.3) 0.3s,
+    opacity 0.1s ease-out 0.3s;
 
   li {
     font-size: 0.8em;
@@ -149,7 +170,7 @@
   &--links {
     @extend .item__list;
     display: flex;
-    padding: 0 0.5em;
+    padding: 1em 2em;
     justify-content: space-between;
     width: 100%;
 

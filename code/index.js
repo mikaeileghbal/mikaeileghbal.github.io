@@ -230,9 +230,11 @@ const App = (function () {
   //<img id="image" class="item__image" src="images/room4.jpg" alt="">
   itemTemplate.innerHTML = `
   						<figure class="item">
-               	<img id="image" class="item__image" src="" alt="">
+                <div class="item__image__wrapp"> 	
+                  <img id="image" class="item__image" src="" alt="">
+                </div>
+                <h3 id="title" class="item__title">Calendar</h3>
                 <figcaption class="item__header">
-                    <h3 id="title" class="item__title">Calendar</h3>
                     <p id="desc" class="item__desc">Dynamic content manipulating with javascript. Get elements of
                         document, create
                         template and clone
@@ -271,10 +273,10 @@ const App = (function () {
     }
 
     let li = `<li>
-              	<a class="button" href="${item.links[0].href}"><i class="fa fa-cube"></i> live project</a>
+              	<a class="button--case button" href="${item.links[0].href}"></i> live project</a>
             	</li>
             	<li>
-              	<a class="button" href="${item.links[1].href}"><i class="fa fa-github"></i> view code</a>
+              	<a class="button--case button" href="${item.links[1].href}"></i> view code</a>
             	</li>`;
 
     viewlinks.innerHTML = li;
