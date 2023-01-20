@@ -22,7 +22,7 @@ body {
 
 ::-webkit-scrollbar {
   background-color: $green-gray;
-  width: 0.5em;
+  width: 3px;
   margin: 5px;
 }
 ::-webkit-scrollbar-thumb {
@@ -41,7 +41,45 @@ body {
 
 section,
 footer {
-  padding: 7em 0.5em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5em 20px;
+}
+
+main {
+  //background-color: $blue-dark;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   bottom: 70%;
+  //   left: 75%;
+  //   width: 350vw;
+  //   height: 400vw;
+  //   margin-left: -120rem;
+  //   margin-left: -200vw;
+  //   z-index: -1;
+  //   border-radius: 50%;
+  //   background-color: #2e3445;
+  //   box-shadow: none;
+
+  // background-image: url(../../img/starwheel.svg?1418951467);
+  // background-size: 100%;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // -webkit-animation-name: orbit;
+  // animation-name: orbit;
+  // -webkit-animation-duration: 1000s;
+  // animation-duration: 1000s;
+  // -webkit-animation-iteration-count: infinite;
+  // animation-iteration-count: infinite;
+  // -webkit-animation-timing-function: linear;
+  // animation-timing-function: linear;
+  //}
 }
 
 %title {
@@ -50,11 +88,11 @@ footer {
 .section-title {
   //color: $black;
   //color: white;
-  text-transform: capitalize;
+
   position: relative;
   font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 0.3em;
+  font-size: 42px;
+  margin-bottom: 0.2em;
 }
 
 .section-subtitle {
@@ -72,8 +110,6 @@ footer {
 p {
   font-weight: 400;
   font-size: 16px;
-  text-align: justify;
-  line-height: 1.7;
   margin-top: 1em;
 }
 
@@ -85,8 +121,7 @@ p {
   margin: 0 auto;
   opacity: 0;
   line-height: 1.6;
-  text-align: center;
-  margin-top: 0.4em;
+  margin-top: 8px;
   @include animation-slide-up(0.4s);
 }
 

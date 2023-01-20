@@ -1,69 +1,24 @@
-main {
-  height: 100vh;
-  //background-color: $blue-dark;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 70%;
-    left: 75%;
-    width: 350vw;
-    height: 400vw;
-    margin-left: -120rem;
-    margin-left: -200vw;
-    z-index: -1;
-    border-radius: 50%;
-    background-color: #2e3445;
-    box-shadow: none;
-
-    // background-image: url(../../img/starwheel.svg?1418951467);
-    // background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // -webkit-animation-name: orbit;
-    // animation-name: orbit;
-    // -webkit-animation-duration: 1000s;
-    // animation-duration: 1000s;
-    // -webkit-animation-iteration-count: infinite;
-    // animation-iteration-count: infinite;
-    // -webkit-animation-timing-function: linear;
-    // animation-timing-function: linear;
-  }
-}
-
 .hero {
   max-width: 1048px;
   margin: 1.5em auto;
-  height: 100%;
-  overflow: hidden;
+  height: 92vh;
+  padding-top: 35.4vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero-container,
 .hero-button-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex: 1 1;
 }
 
 .hero-container {
-  padding: 1em;
-  background-color: rgba(0, 0, 0, 0);
-  flex: 1 1 70%;
-  padding-bottom: 5.6em;
+  text-align: center;
 }
 
 .hero-button-wrap {
+  padding-top: 23vh;
   text-align: center;
-  flex: 1 1 30%;
-  padding-bottom: 6em;
 }
 
 .hero-title,
@@ -78,7 +33,9 @@ main {
 
 .hero-title {
   font-weight: 700;
-  margin-bottom: 0.3em;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+
   @include animation-slide-up(0s);
 
   @include mobile {
@@ -109,5 +66,6 @@ main {
 #hero-button {
   opacity: 0;
   margin: 0 auto;
+
   @include animation-slide-up(0.6s);
 }

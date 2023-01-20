@@ -8,13 +8,43 @@ const App = (function () {
     });
   });
 
+  function hideSections() {
+    console.log(document.querySelector("#about"));
+
+    document.querySelector("#about").style.display = "none";
+    document.querySelector("#portfolio").style.display = "none";
+    document.querySelector("#contact").style.display = "none";
+    //document.querySelector("#resume").style.display = "none";
+  }
+
   function activeTopLink(elem) {
-    console.log(topLinks);
-    console.log(elem);
     topLinks.forEach((a) => {
       a.classList.remove("active");
     });
     elem.classList.add("active");
+    hideSections();
+
+    switch (elem.dataset.section) {
+      case "about":
+        console.log("about");
+        console.log("section: ", document.querySelector("#about"));
+        document.querySelector("#about").style.display = "flex";
+        break;
+      case "portfolio":
+        console.log("portfolio");
+        console.log("section: ", document.querySelector("#portfolio"));
+        document.querySelector("#portfolio").style.display = "block";
+        break;
+
+      case "contact":
+        console.log("contact");
+        console.log("section: ", document.querySelector("#contact"));
+        document.querySelector("#contact").style.display = "block";
+        break;
+      case "resume":
+        console.log("resume");
+        break;
+    }
   }
 
   const menu = document.querySelector(".menu-container");
@@ -70,9 +100,9 @@ const App = (function () {
     }
 
     // Set active top link
-    if (scroll === 0) {
-      activeTopLink(document.querySelectorAll(".link--top")[0]);
-    }
+    // if (scroll === 0) {
+    //   activeTopLink(document.querySelectorAll(".link--top")[0]);
+    // }
   }
 
   // Projects section

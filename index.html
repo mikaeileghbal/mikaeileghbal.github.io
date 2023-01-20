@@ -25,16 +25,20 @@
               <a class="link--top active" href="#top">home</a>
             </li> -->
             <li>
-              <a class="link--top active" href="#about-section">about</a>
+              <a data-section="about" class="link--top active" href="#"
+                >about</a
+              >
             </li>
             <li>
-              <a class="link--top" href="#featured-section">portfolio</a>
+              <a data-section="portfolio" class="link--top" href="#"
+                >portfolio</a
+              >
             </li>
             <li>
-              <a class="link--top" href="#contact-section">contact</a>
+              <a data-section="contact" class="link--top" href="#">contact</a>
             </li>
             <li>
-              <a class="link--top" href="#">resume</a>
+              <a data-section="resume" class="link--top" href="#">resume</a>
             </li>
           </ul>
           <!-- <a class="button--resume" href="#">resume</a> -->
@@ -49,7 +53,7 @@
 
     <!-- Hero section -->
     <main>
-      <div class="hero">
+      <section id="about" class="hero">
         <div class="hero-container">
           <h1 class="hero-title">Hello, my name is Mikaeil Eghbal.</h1>
           <!-- <h2 class="hero-subtitle">web developer focused on the front-end</h2> -->
@@ -72,7 +76,54 @@
         <div class="hero-button-wrap">
           <button class="button">take a look at my work</button>
         </div>
-      </div>
+      </section>
+
+      <!-- Projects section -->
+      <section id="portfolio" class="case-study-section">
+        <div class="title-container">
+          <h2 class="section-title">web developer portfolio</h2>
+          <p class="text">
+            From Html, CSS and Web Components to React.JS, Next.JS, Redux,
+            Suztand, React Qury, MongoDB and MySQL. Check out my latest web
+            software development portfolio projects.
+          </p>
+        </div>
+        <div class="tags-container">
+          <ul class="tags" id="tags">
+            <li class="button tag__item">show all</li>
+            <li class="button tag__item">html</li>
+            <li class="button tag__item">sass</li>
+            <li class="button tag__item">javascript</li>
+            <li class="button tag__item">reactjs</li>
+            <li class="button tag__item">nextjs</li>
+            <li class="button tag__item">reduc</li>
+            <li class="button tag__item">zustand</li>
+            <li class="button tag__item">context</li>
+            <li class="button tag__item">react router</li>
+            <li class="button tag__item">react query</li>
+            <li class="button tag__item">mongodb</li>
+            <li class="button tag__item">mysql</li>
+          </ul>
+        </div>
+        <p class="filter-status text">
+          Showing all projects. Use the filter to list them by skill or
+          technology.
+        </p>
+        <div class="project__container"></div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="contact-section centered-text">
+        <div class="title-container">
+          <h2 class="section-title">Contact</h2>
+          <h4 class="section-subtitle">Would you like to contact?</h4>
+        </div>
+
+        <p class="contact-text">
+          If you like my work and would like to work together, please send me
+          direct message or contact me through my social links.
+        </p>
+      </section>
     </main>
 
     <!-- About section -->
@@ -144,32 +195,6 @@
           My main projects showing my recent work
         </h4>
       </div>
-    </section> -->
-
-    <!-- Projects section -->
-    <section id="case-study-section" class="case-study-section centered-text">
-      <div class="title-container">
-        <h2 class="section-title">web developer portfolio</h2>
-        <p class="text">
-          From Html, CSS and Web Components to React.JS, Next.JS, Redux,
-          Suztand, React Qury, MongoDB and MySQL. Check out my latest web
-          software development portfolio projects.
-        </p>
-      </div>
-      <div class="project__container"></div>
-    </section>
-
-    <!-- Contact section -->
-    <!-- <section id="contact-section" class="contact-section centered-text">
-      <div class="title-container">
-        <h2 class="section-title">Contact</h2>
-        <h4 class="section-subtitle">Would you like to contact?</h4>
-      </div>
-
-      <p class="contact-text">
-        If you like my work and would like to work together, please send me
-        direct message or contact me through my social links.
-      </p>
     </section> -->
 
     <!-- Footer section -->
