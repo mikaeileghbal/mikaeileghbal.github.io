@@ -80,8 +80,57 @@ const App = (function () {
   // Array of project items
   let itemObjects = [
     {
+      title: "fixer",
+      desc: "next.js mongodb next-auth",
+      tags: ["next.js", "mongodb", "next-auth", "rest api"],
+      links: [
+        {
+          text: "view project",
+          href: "https://github.com/mikaeileghbal/fixer",
+        },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/fixer",
+        },
+      ],
+      src: "./images/fixer-1.png",
+    },
+    {
+      title: "music store",
+      desc: "react.js  redux react router",
+      tags: ["react.js", "redux", "react router"],
+      links: [
+        {
+          text: "view project",
+          href: "https://github.com/mikaeileghbal/music-store",
+        },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/music-store",
+        },
+      ],
+      src: "./images/musicstore-1.png",
+    },
+    {
+      title: "react mysql",
+      desc: "react.js  MySQL  redux zustand react auery ",
+      tags: ["react.js", "MySQL", "redux", "zustand", "react router"],
+      links: [
+        {
+          text: "view project",
+          href: "https://github.com/mikaeileghbal/react-mysql",
+        },
+        {
+          text: "view code",
+          href: "https://github.com/mikaeileghbal/react-mysql",
+        },
+      ],
+      src: "./images/mysql.png",
+    },
+
+    {
       title: "github user profile",
-      desc: "react chart api",
+      desc: "react.js chart.js REST Api",
       tags: ["react", "javascript", "chart", "api"],
       links: [
         { text: "view project", href: "./githubuserprofile/index.html" },
@@ -120,7 +169,7 @@ const App = (function () {
     },
     {
       title: "my notes ",
-      desc: "react context hooks webpack",
+      desc: "react.js context hooks webpack",
       tags: ["react", "javascript", "context", "hooks", "webpack"],
       links: [
         { text: "view project", href: "./mynotes/" },
@@ -131,19 +180,19 @@ const App = (function () {
       ],
       src: "./images/mynotes.png",
     },
-    {
-      title: "color rating ",
-      desc: "react context react router",
-      tags: ["react", "javascript", "context", "router"],
-      links: [
-        { text: "view project", href: "./color-rating/" },
-        {
-          text: "view code",
-          href: "https://github.com/mikaeileghbal/color-rating.git",
-        },
-      ],
-      src: "./images/colorrating.png",
-    },
+    // {
+    //   title: "color rating ",
+    //   desc: "react.js context react router",
+    //   tags: ["react.js", "javascript", "context", "router"],
+    //   links: [
+    //     { text: "view project", href: "./color-rating/" },
+    //     {
+    //       text: "view code",
+    //       href: "https://github.com/mikaeileghbal/color-rating.git",
+    //     },
+    //   ],
+    //   src: "./images/colorrating.png",
+    // },
     {
       title: "form validation",
       desc: "form custom validation",
@@ -157,19 +206,19 @@ const App = (function () {
       ],
       src: "./images/formvalidate.png",
     },
-    {
-      title: "calendar",
-      desc: "Dynamic Content Webpack",
-      tags: ["html", "css", "scss", "javascript", "webpack"],
-      links: [
-        { text: "view project", href: "./calendar-planner/index.html" },
-        {
-          text: "view code",
-          href: "https://github.com/mikaeileghbal/calendar-planner.git",
-        },
-      ],
-      src: "./images/calendar.png",
-    },
+    // {
+    //   title: "calendar",
+    //   desc: "Dynamic Content Webpack",
+    //   tags: ["html", "css", "scss", "javascript", "webpack"],
+    //   links: [
+    //     { text: "view project", href: "./calendar-planner/index.html" },
+    //     {
+    //       text: "view code",
+    //       href: "https://github.com/mikaeileghbal/calendar-planner.git",
+    //     },
+    //   ],
+    //   src: "./images/calendar.png",
+    // },
     {
       title: "weather",
       desc: "Public API",

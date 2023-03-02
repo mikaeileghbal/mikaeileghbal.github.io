@@ -515,7 +515,6 @@ input[type=text]:valid {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transition: all 0.1s linear;
   overflow: auto;

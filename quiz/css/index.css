@@ -88,7 +88,6 @@ button {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
 }
@@ -191,16 +190,7 @@ main li:nth-child(1) > a {
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: 600;
-  -webkit-animation: slide 0.5s;
-          animation: slide 0.5s;
-}
-@-webkit-keyframes slide {
-  0% {
-    transform: translateX(200px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  animation: slide 0.5s;
 }
 @keyframes slide {
   0% {
@@ -269,7 +259,6 @@ footer ul > li {
   margin-top: 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .score-wrapper .score {

@@ -48,7 +48,7 @@ $extra-large-screen: 1920px;
 }
 
 @mixin large {
-  @media screen and(min-width:$large-screen) {
+  @media screen and (min-width: $large-screen) {
     @content;
   }
 }
